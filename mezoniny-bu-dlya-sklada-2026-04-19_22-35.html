@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Б/у мезонины для склада под ключ | СКЛАДМСК</title>
+    <meta name="description" content="СКЛАДМСК: б/у мезонины для склада под ключ. Подбор по площади и нагрузке, техническая проверка, доставка, монтаж и дооснащение. Работаем по Москве, МО и всей России." />
+    <style>
+        :root {
+            --bg: #eff3f6;
+            --surface: #ffffff;
+            --surface-soft: #f7f9fb;
+            --dark: #1b2c37;
+            --text: #17242d;
+            --muted: #64727c;
+            --line: #d6dee5;
+            --primary: #1d5e87;
+            --primary-dark: #123d58;
+            --accent: #d98534;
+            --success: #2e7057;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --shadow: 0 16px 34px rgba(23, 36, 45, 0.08);
+            --max-width: 1240px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            background: linear-gradient(180deg, #f5f7f9 0%, #eef2f5 100%);
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topline {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.9rem;
+        }
+
+        .topline-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-mark {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        .brand-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-subtitle {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav a,
+        .btn,
+        .btn-secondary {
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .nav a {
+            background: #fff;
+            border: 1px solid var(--line);
+            color: var(--muted);
+        }
+
+        .btn {
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            box-shadow: 0 12px 24px rgba(29, 94, 135, 0.22);
+            border: 0;
+            cursor: pointer;
+        }
+
+        .btn-secondary {
+            color: var(--primary-dark);
+            background: #edf4f8;
+            border: 1px solid #cfe0e9;
+        }
+
+        .hero {
+            padding: 28px 0 22px;
+        }
+
+        .hero-grid,
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.18fr 0.82fr;
+            gap: 18px;
+        }
+
+        .hero-main,
+        .hero-side,
+        .card,
+        .service,
+        .case,
+        .faq,
+        .contact,
+        .step,
+        .metric,
+        .table-card,
+        .gallery-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-main,
+        .card,
+        .service,
+        .case,
+        .faq,
+        .contact,
+        .step,
+        .metric,
+        .table-card {
+            padding: 22px;
+        }
+
+        .hero-main {
+            padding: 38px;
+            color: #f4f8fb;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(18, 61, 88, 0.96), rgba(29, 94, 135, 0.92));
+        }
+
+        .hero-kicker,
+        .section-kicker,
+        .case-tag {
+            display: inline-flex;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .hero-kicker {
+            background: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.94);
+        }
+
+        .section-kicker {
+            background: #e9f2f8;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .case-tag {
+            background: #e9f3ee;
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            margin-top: 18px;
+            max-width: 12ch;
+            font-size: clamp(2.4rem, 5vw, 4.6rem);
+            line-height: 0.98;
+            letter-spacing: -0.05em;
+        }
+
+        .hero-text {
+            margin-top: 18px;
+            max-width: 62ch;
+            color: rgba(244, 248, 251, 0.82);
+            font-size: 1.05rem;
+        }
+
+        .hero-actions,
+        .table-row,
+        .contact-line,
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-actions {
+            margin-top: 24px;
+        }
+
+        .hero-actions .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.16);
+        }
+
+        .hero-points,
+        .grid-4,
+        .grid-3,
+        .grid-5,
+        .form-grid,
+        .gallery-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .hero-points,
+        .grid-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .grid-5 {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .form-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .gallery-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .hero-point,
+        .metric-item,
+        .contact-card,
+        .highlight-item {
+            padding: 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-point strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .hero-point span,
+        .metric > p,
+        .metric-item span,
+        .form-note,
+        .contact-note {
+            color: rgba(244, 248, 251, 0.76);
+        }
+
+        .hero-side {
+            padding: 20px;
+            display: grid;
+            gap: 16px;
+            align-content: start;
+        }
+
+        .metric {
+            color: #f4f8fb;
+            background: linear-gradient(180deg, #293c49 0%, #20303b 100%);
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .metric-item {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .metric-item strong,
+        .number-card strong {
+            display: block;
+            font-size: 1.8rem;
+            margin-bottom: 4px;
+        }
+
+        .table-card strong {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .table-row,
+        .contact-line {
+            padding: 12px 0;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+        }
+
+        .table-row:first-of-type,
+        .contact-line:first-child {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        .section-head {
+            align-items: end;
+            margin-bottom: 18px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            line-height: 1.04;
+            letter-spacing: -0.04em;
+        }
+
+        .section-head p,
+        .card p,
+        .service p,
+        .case p,
+        .faq p,
+        .step p,
+        .contact-list,
+        footer,
+        .gallery-card p {
+            color: var(--muted);
+        }
+
+        .section-head p {
+            max-width: 58ch;
+        }
+
+        .card::before,
+        .service::before,
+        .case::before,
+        .faq::before {
+            content: "";
+            display: block;
+            width: 44px;
+            height: 3px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .card,
+        .service,
+        .case,
+        .faq,
+        .contact,
+        .step {
+            padding: 22px;
+        }
+
+        .card strong,
+        .service strong,
+        .case strong,
+        .faq strong,
+        .contact strong,
+        .step strong,
+        .gallery-card strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .highlight-band {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 16px;
+            padding: 26px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--line);
+            background: linear-gradient(135deg, #f5f8fa, #ecf1f5);
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-list,
+        .contact-stack,
+        .lead-form,
+        .contact-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .highlight-item {
+            background: rgba(255, 255, 255, 0.7);
+            color: var(--text);
+        }
+
+        .case-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .step-number {
+            width: 38px;
+            height: 38px;
+            display: inline-grid;
+            place-items: center;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            color: #fff;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        .contact-main {
+            color: #f4f8fb;
+            background: linear-gradient(135deg, #223849, #1b2c38);
+        }
+
+        .contact-main .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.16);
+        }
+
+        .form-field {
+            display: grid;
+            gap: 8px;
+        }
+
+        .form-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            font-size: 0.92rem;
+            color: rgba(244, 248, 251, 0.86);
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 14px 14px;
+            font: inherit;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: rgba(217, 133, 52, 0.95);
+            box-shadow: 0 0 0 3px rgba(217, 133, 52, 0.22);
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: rgba(244, 248, 251, 0.52);
+        }
+
+        .form-field option {
+            color: var(--text);
+        }
+
+        .form-field textarea {
+            min-height: 128px;
+            resize: vertical;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: rgba(244, 248, 251, 0.82);
+            font-size: 0.92rem;
+        }
+
+        .form-check input {
+            margin-top: 3px;
+            accent-color: var(--accent);
+        }
+
+        .contact-card {
+            padding: 20px;
+            border-radius: var(--radius-md);
+            background: var(--surface-soft);
+            border: 1px solid var(--line);
+        }
+
+        .contact-line span:last-child {
+            color: var(--text);
+            text-align: right;
+        }
+
+        .gallery-card {
+            overflow: hidden;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-card-content {
+            padding: 16px;
+        }
+
+        footer {
+            padding: 16px 0 38px;
+        }
+
+        @media (max-width: 1100px) {
+            .hero-grid,
+            .highlight-band,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-4,
+            .grid-3,
+            .grid-5,
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                width: min(var(--max-width), calc(100% - 20px));
+            }
+
+            .topline-inner,
+            .header-inner,
+            .section-head {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .hero-main,
+            .hero-side,
+            .card,
+            .service,
+            .case,
+            .faq,
+            .contact,
+            .step,
+            .metric,
+            .table-card,
+            .highlight-band {
+                padding: 18px;
+            }
+
+            .hero-points,
+            .metric-grid,
+            .form-grid,
+            .gallery-grid,
+            .grid-4,
+            .grid-3,
+            .grid-5 {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topline">
+        <div class="container topline-inner">
+            <div>СКЛАДМСК / СКЛАД МОСКВА РФ | Б/у мезонины для складских объектов</div>
+            <div>Москва, МО и вся Россия | +7 (495) 150-77-43 | Пн-Пт 09:30-18:00</div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="brand-mark">MZ</div>
+                <div>
+                    <div class="brand-title">СКЛАДМСК</div>
+                    <div class="brand-subtitle">Б/у мезонины для склада, подбор, проверка, доставка и монтаж</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <nav class="nav">
+                    <a href="#formats">Форматы</a>
+                    <a href="#warehouse-tasks">Задачи склада</a>
+                    <a href="#inspection">Проверка</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#cases">Кейсы</a>
+                    <a href="#contact">Заявка</a>
+                </nav>
+                <a class="btn" href="#contact">Получить расчет</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-main">
+                    <div class="hero-kicker">СКЛАДМСК | Б/у мезонины для склада</div>
+                    <h1>Б/у мезонины для склада с подбором под площадь, нагрузку и схему хранения</h1>
+                    <p class="hero-text">
+                        Подбираем и поставляем б/у мезонины именно для складских объектов: под коробочное хранение,
+                        увеличение полезной площади, разделение хранения и комплектации, сезонный запас и организацию
+                        второго уровня без длительного цикла нового производства. Проверяем состояние конструкции,
+                        рассчитываем допустимую нагрузку и монтируем решение под ваш склад.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn" href="#contact">Получить расчет стоимости</a>
+                        <a class="btn-secondary" href="#formats">Смотреть форматы решений</a>
+                        <a class="btn-secondary" href="tel:+74951507743">Позвонить: +7 (495) 150-77-43</a>
+                    </div>
+                    <div class="hero-points">
+                        <div class="hero-point">
+                            <strong>Больше полезной площади склада</strong>
+                            <span>Дополнительный уровень хранения без переезда и строительства нового помещения.</span>
+                        </div>
+                        <div class="hero-point">
+                            <strong>Быстрый запуск складского проекта</strong>
+                            <span>Без длинного цикла изготовления нового мезонина с нуля.</span>
+                        </div>
+                        <div class="hero-point">
+                            <strong>Проверка под реальную нагрузку</strong>
+                            <span>Оценка конструкции под сценарий хранения, проходы, настилы и рабочие зоны.</span>
+                        </div>
+                        <div class="hero-point">
+                            <strong>Один подрядчик на весь цикл</strong>
+                            <span>Подбор, доставка, монтаж, дооснащение и запуск склада в одном проекте.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-side">
+                    <div class="metric">
+                        <strong>Специализация и география работ</strong>
+                        <p>
+                            С 2008 года поставляем складские решения по всей России. Для проектов по б/у мезонинам
+                            помогаем быстро увеличить полезную площадь действующего склада и встроить второй уровень
+                            в текущую схему хранения без остановки основных процессов.
+                        </p>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-grid">
+                            <div class="metric-item">
+                                <strong>15+</strong>
+                                <span>лет на рынке складских решений</span>
+                            </div>
+                            <div class="metric-item">
+                                <strong>до 60%</strong>
+                                <span>экономии относительно нового решения</span>
+                            </div>
+                            <div class="metric-item">
+                                <strong>300-1000</strong>
+                                <span>кг/м2 типовая расчетная нагрузка</span>
+                            </div>
+                            <div class="metric-item">
+                                <strong>6-100+</strong>
+                                <span>м2 решения от компактных до крупных складских зон</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-card">
+                        <strong>Контакты и режим работы</strong>
+                        <div class="table-row"><span>Телефон МСК</span><span>+7 (495) 150-77-43</span></div>
+                        <div class="table-row"><span>Мобильный</span><span>+7 (931) 521-39-71</span></div>
+                        <div class="table-row"><span>E-mail</span><span>info@skladmsk.com</span></div>
+                        <div class="table-row"><span>Пн-Пт</span><span>09:30 - 18:00</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Преимущества</div>
+                        <h2>Почему б/у мезонин особенно хорошо работает для склада</h2>
+                    </div>
+                    <p>
+                        Для складского объекта важны не только квадратные метры, но и логика потоков, допустимая
+                        нагрузка, скорость запуска и возможность встроить конструкцию в действующую инфраструктуру.
+                    </p>
+                </div>
+                <div class="grid-4">
+                    <article class="card">
+                        <strong>Увеличение емкости без переезда</strong>
+                        <p>Получаете второй уровень хранения в действующем складе без капитальной перестройки объекта.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Рациональная экономика проекта</strong>
+                        <p>Б/у мезонин часто позволяет запустить складское решение быстрее и заметно дешевле нового.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Адаптация под схему хранения</strong>
+                        <p>Учитываем проходы, тип товара, зоны отбора, сезонный запас, настилы и лестницы.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Комплексное сопровождение</strong>
+                        <p>Подбор, логистика, монтаж, дооснащение и ввод в эксплуатацию в рамках одного проекта.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="warehouse-tasks">
+            <div class="container highlight-band">
+                <div>
+                    <div class="section-kicker">Задачи склада</div>
+                    <h2>Когда б/у мезонин для склада особенно эффективен</h2>
+                    <p style="margin-top: 14px; color: var(--muted); max-width: 58ch;">
+                        Эта страница закрывает складской интент: увеличение зоны хранения, разведение процессов,
+                        быстрый запуск второго уровня и адаптация конструкции под реальную логику объекта.
+                    </p>
+                </div>
+                <div class="highlight-list">
+                    <div class="highlight-item">Нужно увеличить площадь хранения в действующем складе без переезда.</div>
+                    <div class="highlight-item">Нужно отделить хранение от комплектации или упаковки по уровням.</div>
+                    <div class="highlight-item">Важно быстро запустить объект и удержать бюджет проекта.</div>
+                    <div class="highlight-item">Нужны поставка, монтаж и адаптация под текущую логистику склада.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formats">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Форматы решений</div>
+                        <h2>Какие б/у мезонины для склада чаще всего запрашивают</h2>
+                    </div>
+                    <p>
+                        На складских объектах спрос обычно раскладывается не по абстрактным типам конструкций,
+                        а по практической задаче: увеличить хранение, выделить зону отбора, организовать второй уровень
+                        или встроить мезонин в существующую схему движения товара.
+                    </p>
+                </div>
+                <div class="grid-3">
+                    <article class="service">
+                        <strong>Мезонин под хранение коробочного товара</strong>
+                        <p>Когда нужен дополнительный уровень под легкий и средний по нагрузке товар.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Мезонин под комплектацию и упаковку</strong>
+                        <p>Для разведения потоков отбора, упаковки и временного размещения заказов по уровням.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Мезонин для смешанного склада</strong>
+                        <p>Когда в проекте одновременно нужны хранение, операционные зоны и проходы для персонала.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Мезонин для сезонного запаса</strong>
+                        <p>Под размещение товара, который требует отдельной зоны хранения в пиковые периоды.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Мезонин с дооснащением</strong>
+                        <p>Под настилы, ограждения, лестницы и другие элементы безопасной эксплуатации.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Адаптация под действующий склад</strong>
+                        <p>По высоте помещения, площади, режиму хранения, проходам и рабочим маршрутам.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="inspection">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Проверка</div>
+                        <h2>Как проверяется б/у мезонин перед монтажом на складе</h2>
+                    </div>
+                    <p>
+                        Для складского объекта особенно важно проверить не только общее состояние конструкции,
+                        но и соответствие нагрузке, схеме хранения, проходам и предполагаемому режиму эксплуатации.
+                    </p>
+                </div>
+                <div class="grid-3">
+                    <article class="service">
+                        <strong>Проверка каркаса и несущих элементов</strong>
+                        <p>Оцениваем колонны, балки и общую пригодность конструкции к повторному монтажу на складе.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Ревизия узлов и крепежа</strong>
+                        <p>Проверяем соединения, заменяем изношенные позиции и исключаем риски для складской эксплуатации.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Оценка рабочей нагрузки</strong>
+                        <p>Подтверждаем соответствие конструкции товарной нагрузке, персоналу и режиму использования.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Услуги</div>
+                        <h2>Какие услуги чаще всего нужны складу вместе с мезонином</h2>
+                    </div>
+                    <p>
+                        На складских объектах задача почти всегда шире, чем просто покупка конструкции. Обычно нужен
+                        выезд, расчет параметров, логистика, монтаж, дооснащение и привязка решения к текущим процессам склада.
+                    </p>
+                </div>
+                <div class="grid-3">
+                    <article class="service">
+                        <strong>Выезд и замер</strong>
+                        <p>Сбор исходных данных по помещению, проходам, высоте, нагрузке и режиму работы.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Подбор и техническая оценка</strong>
+                        <p>Оценка наличия, конфигурации, состояния и возможности адаптации под задачу клиента.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Доставка на объект</strong>
+                        <p>Организация логистики в согласованные сроки с учетом региона поставки.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Сборка и монтаж</strong>
+                        <p>Монтаж на площадке с учетом техники безопасности и графика запуска объекта.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Доработка и дооснащение</strong>
+                        <p>Настилы, лестницы, ограждения, проходы и другие элементы под конкретный сценарий использования.</p>
+                    </article>
+                    <article class="service">
+                        <strong>Интеграция со стеллажами</strong>
+                        <p>Дополнительные системы хранения подключаются, если это усиливает общую схему склада.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Показатели</div>
+                        <h2>Ориентиры для складского проекта</h2>
+                    </div>
+                    <p>
+                        Эти параметры помогают быстро понять масштаб складского проекта и рамки будущего решения:
+                        площадь, нагрузку, экономику и состав работ по монтажу и запуску.
+                    </p>
+                </div>
+                <div class="grid-4">
+                    <article class="card number-card">
+                        <strong>15+</strong>
+                        <p>лет на рынке складских решений с 2008 года</p>
+                    </article>
+                    <article class="card number-card">
+                        <strong>до 60%</strong>
+                        <p>экономии по сравнению с новым мезонином</p>
+                    </article>
+                    <article class="card number-card">
+                        <strong>300-1000</strong>
+                        <p>кг/м2 типовая расчетная нагрузка</p>
+                    </article>
+                    <article class="card number-card">
+                        <strong>6-100+</strong>
+                        <p>м2 решения от компактных до крупногабаритных проектов</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Кейсы</div>
+                        <h2>Примеры складских сценариев</h2>
+                    </div>
+                    <p>
+                        Для склада важна не абстрактная конструкция, а результат: рост емкости, запуск второго уровня,
+                        разделение процессов хранения и комплектации и понятные сроки ввода в работу.
+                    </p>
+                </div>
+                <div class="grid-3">
+                    <article class="case">
+                        <div class="case-tag">Склад хранения</div>
+                        <strong>Расширение зоны хранения без переезда склада</strong>
+                        <p>Б/у мезонин подобран под высоту помещения и режим хранения, смонтирован в согласованный срок.</p>
+                        <div class="case-meta">
+                            <span>+120 м² полезной площади</span>
+                            <span>Монтаж за 5 дней</span>
+                            <span>Экономия относительно нового решения</span>
+                        </div>
+                    </article>
+                    <article class="case">
+                        <div class="case-tag">Комплектация</div>
+                        <strong>Отделение хранения от комплектации по уровням</strong>
+                        <p>Второй уровень использован для операционных задач с настилом, ограждениями и безопасными проходами.</p>
+                        <div class="case-meta">
+                            <span>Быстрый запуск</span>
+                            <span>Доработка под объект</span>
+                            <span>Монтаж под ключ</span>
+                        </div>
+                    </article>
+                    <article class="case">
+                        <div class="case-tag">Комплексный проект</div>
+                        <strong>Мезонин как часть общей схемы хранения</strong>
+                        <p>Конструкция встроена в действующий склад с дополнительными стеллажами и сохранением логистики объекта.</p>
+                        <div class="case-meta">
+                            <span>Фокус на складе</span>
+                            <span>Единый подрядчик</span>
+                            <span>Комплексное оснащение</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Фото объектов</div>
+                        <h2>Фото складских объектов и б/у мезонинов</h2>
+                    </div>
+                    <p>
+                        Фото дают пользователю то, что особенно важно для коммерческого интента: понимание масштаба,
+                        состояния конструкций и реальности складских сценариев, а не только текстовое описание услуги.
+                    </p>
+                </div>
+                <div class="gallery-grid">
+                    <article class="gallery-card">
+                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-1.jpeg" alt="Б/у мезонин на складе">
+                        <div class="gallery-card-content">
+                            <strong>Б/у мезонин для хранения</strong>
+                            <p>Пример конструкции после подбора и подготовки к монтажу на новом объекте.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-2.jpeg" alt="Мезонинный уровень для комплектации">
+                        <div class="gallery-card-content">
+                            <strong>Зона комплектации</strong>
+                            <p>Решение для распределения упаковки, подбора заказов и дополнительных рабочих зон.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/about/about_sklad_1.jpg" alt="Центральный склад компании в Московской области">
+                        <div class="gallery-card-content">
+                            <strong>Центральный склад</strong>
+                            <p>Склад и логистический центр компании в Московской области для быстрой комплектации проектов.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/about/about_sklad_gal_4.jpg" alt="Пример объекта и металлоконструкций">
+                        <div class="gallery-card-content">
+                            <strong>Примеры объектов</strong>
+                            <p>Фрагменты реализованных решений и инфраструктуры, связанной со складскими проектами.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Этапы работ</div>
+                        <h2>Как проходит проект для складского объекта</h2>
+                    </div>
+                    <p>
+                        От первого обращения до запуска второго уровня в работу проект проходит через расчет,
+                        подбор, ревизию, доставку и монтаж с учетом реальной логистики склада.
+                    </p>
+                </div>
+                <div class="grid-5">
+                    <article class="step">
+                        <div class="step-number">1</div>
+                        <strong>Запрос</strong>
+                        <p>Получаем параметры объекта, задачу, сроки и требования по нагрузке.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">2</div>
+                        <strong>Подбор</strong>
+                        <p>Выбираем подходящую конфигурацию б/у мезонина по габаритам и назначению.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">3</div>
+                        <strong>Проверка</strong>
+                        <p>Проводим ревизию состояния конструкции и определяем объем необходимых доработок.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">4</div>
+                        <strong>Поставка</strong>
+                        <p>Комплектуем проект и организуем логистику в согласованные сроки.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">5</div>
+                        <strong>Монтаж</strong>
+                        <p>Собираем, дооснащаем и сдаем конструкцию в готовом к эксплуатации состоянии.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">FAQ</div>
+                        <h2>Частые вопросы по б/у мезонинам для склада</h2>
+                    </div>
+                    <p>
+                        Здесь закрываются самые частые вопросы складских клиентов: по стоимости, нагрузке,
+                        состоянию конструкции, монтажу и адаптации под конкретную схему хранения.
+                    </p>
+                </div>
+                <div class="grid-3">
+                    <article class="faq">
+                        <strong>Сколько стоит б/у мезонин для склада?</strong>
+                        <p>Цена зависит от площади, расчетной нагрузки, состояния конструкции и объема работ по дооснащению и монтажу.</p>
+                    </article>
+                    <article class="faq">
+                        <strong>Подойдет ли б/у мезонин под мой склад?</strong>
+                        <p>Это определяется по высоте, площади, схеме проходов, характеру хранения и требуемой нагрузке.</p>
+                    </article>
+                    <article class="faq">
+                        <strong>Как подтверждается безопасность конструкции?</strong>
+                        <p>Через ревизию каркаса, узлов, крепежа, геометрии и оценку допустимой рабочей нагрузки.</p>
+                    </article>
+                    <article class="faq">
+                        <strong>Можно ли встроить мезонин в существующую схему хранения?</strong>
+                        <p>Да, если конструкция подходит под параметры склада и проект корректно адаптируется под объект.</p>
+                    </article>
+                    <article class="faq">
+                        <strong>Входит ли монтаж в состав проекта?</strong>
+                        <p>Да, при необходимости поставка сопровождается сборкой, дооснащением и вводом в эксплуатацию.</p>
+                    </article>
+                    <article class="faq">
+                        <strong>В каких регионах возможна поставка?</strong>
+                        <p>Работаем по Москве, Московской области и всей России с организацией доставки и монтажа.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container contact-grid">
+                <div class="contact contact-main">
+                    <div class="section-kicker" style="background: rgba(255,255,255,0.1); color: #fff;">Запрос проекта</div>
+                    <h2>Получите подбор б/у мезонина для склада с расчетом стоимости, доставки и монтажа</h2>
+                    <p style="margin-top: 14px; max-width: 60ch; color: rgba(244,248,251,0.78);">
+                        Оставьте заявку или свяжитесь с отделом продаж СКЛАДМСК. Подберем подходящий б/у мезонин именно под склад,
+                        рассчитаем стоимость проекта и предложим решение с доставкой и монтажом под ваш объект.
+                    </p>
+                    <form class="lead-form" action="#" method="post">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="name">Ваше имя</label>
+                                <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Телефон</label>
+                                <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">E-mail</label>
+                                <input id="email" name="email" type="email" placeholder="info@company.ru">
+                            </div>
+                            <div class="form-field">
+                                <label for="usage">Складская задача</label>
+                                <select id="usage" name="usage">
+                                    <option value="">Выберите вариант</option>
+                                    <option>Увеличение зоны хранения</option>
+                                    <option>Комплектация и упаковка</option>
+                                    <option>Разделение процессов по уровням</option>
+                                    <option>Смешанный складской сценарий</option>
+                                    <option>Другое</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="area">Требуемая площадь</label>
+                                <input id="area" name="area" type="text" placeholder="Например, 60-80 м2">
+                            </div>
+                            <div class="form-field">
+                                <label for="load">Нагрузка</label>
+                                <input id="load" name="load" type="text" placeholder="Например, 500 кг/м2">
+                            </div>
+                            <div class="form-field full">
+                                <label for="message">Параметры склада</label>
+                                <textarea id="message" name="message" placeholder="Укажите высоту помещения, площадь склада, тип товара, регион, желаемые сроки запуска и особенности монтажа"></textarea>
+                            </div>
+                        </div>
+                        <label class="form-check" for="agree">
+                            <input id="agree" name="agree" type="checkbox" required>
+                            <span>Даю согласие на обработку персональных данных и принимаю условия работы с заявкой.</span>
+                        </label>
+                        <div class="hero-actions" style="margin-top: 0;">
+                            <button class="btn" type="submit">Отправить заявку</button>
+                            <a class="btn-secondary" href="mailto:info@skladmsk.com">Отправить на e-mail</a>
+                        </div>
+                        <div class="form-note">Для первичного расчета обычно достаточно высоты склада, площади, нагрузки, типа товара, региона и сценария использования.</div>
+                    </form>
+                </div>
+                <div class="contact-stack">
+                    <div class="contact">
+                        <strong>Контакты отдела продаж</strong>
+                        <div class="contact-list">
+                            <div class="contact-line"><span>Телефон МСК</span><span><a href="tel:+74951507743">+7 (495) 150-77-43</a></span></div>
+                            <div class="contact-line"><span>Мобильный</span><span><a href="tel:+79315213971">+7 (931) 521-39-71</a></span></div>
+                            <div class="contact-line"><span>E-mail</span><span><a href="mailto:info@skladmsk.com">info@skladmsk.com</a></span></div>
+                            <div class="contact-line"><span>Время работы</span><span>Пн-Пт, 09:30-18:00</span></div>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <strong>Адрес склада и логистического центра</strong>
+                        <p class="contact-note" style="color: var(--muted);">
+                            Московская область, Богородский городской округ, село Кудиново, Центральная улица, 11Б.
+                            Координаты для навигатора: 55.779774, 38.309485.
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <strong>Что можно обсудить сразу</strong>
+                        <p class="contact-note" style="color: var(--muted);">
+                            Наличие б/у мезонинов, ориентировочную стоимость, подходящие типоразмеры, расчет нагрузки,
+                            сроки поставки, условия монтажа и состав дополнительной комплектации.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            СКЛАДМСК / СКЛАД МОСКВА РФ. Б/у мезонины для склада под ключ: подбор, проверка состояния, доставка, монтаж и дооснащение. Цены на сайте не являются публичной офертой.
+        </div>
+    </footer>
+    <script>
+        (function () {
+            var phoneInput = document.getElementById('phone');
+            if (!phoneInput) {
+                return;
+            }
+
+            function formatPhone(value) {
+                var digits = value.replace(/\D/g, '');
+
+                if (digits.charAt(0) === '8') {
+                    digits = '7' + digits.slice(1);
+                }
+
+                if (digits.charAt(0) !== '7') {
+                    digits = '7' + digits;
+                }
+
+                digits = digits.slice(0, 11);
+
+                var result = '+7';
+                if (digits.length > 1) {
+                    result += ' (' + digits.slice(1, 4);
+                }
+                if (digits.length >= 4) {
+                    result += ') ' + digits.slice(4, 7);
+                }
+                if (digits.length >= 7) {
+                    result += '-' + digits.slice(7, 9);
+                }
+                if (digits.length >= 9) {
+                    result += '-' + digits.slice(9, 11);
+                }
+
+                return result;
+            }
+
+            phoneInput.addEventListener('input', function (event) {
+                event.target.value = formatPhone(event.target.value);
+            });
+
+            phoneInput.addEventListener('focus', function (event) {
+                if (!event.target.value) {
+                    event.target.value = '+7';
+                }
+            });
+
+            phoneInput.addEventListener('blur', function (event) {
+                if (event.target.value === '+7') {
+                    event.target.value = '';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

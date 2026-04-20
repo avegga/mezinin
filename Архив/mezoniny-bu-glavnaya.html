@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Б/у мезонины для склада под ключ - доставка, монтаж, расчет</title>
+    <meta name="description" content="Б/у мезонины для склада под ключ: подбор, проверка состояния, доставка, монтаж и дооснащение. Получите расчет стоимости и подходящее решение под ваш объект." />
+    <style>
+        :root {
+            --bg: #f5efe5;
+            --surface: rgba(255, 250, 242, 0.92);
+            --surface-strong: #fff7ee;
+            --text: #1f1a16;
+            --muted: #6a5b4f;
+            --line: rgba(61, 41, 24, 0.14);
+            --primary: #b5522d;
+            --primary-dark: #7f3418;
+            --accent: #244b43;
+            --accent-soft: #dce9e1;
+            --shadow: 0 24px 60px rgba(48, 25, 11, 0.12);
+            --radius-xl: 32px;
+            --radius-lg: 22px;
+            --radius-md: 16px;
+            --max-width: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(181, 82, 45, 0.18), transparent 32%),
+                radial-gradient(circle at right 20%, rgba(36, 75, 67, 0.14), transparent 26%),
+                linear-gradient(180deg, #f8f1e8 0%, #f2ebdf 48%, #efe8dd 100%);
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .shell {
+            width: min(var(--max-width), calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(14px);
+            background: rgba(245, 239, 229, 0.84);
+            border-bottom: 1px solid rgba(61, 41, 24, 0.08);
+        }
+
+        .topbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            box-shadow: 0 14px 24px rgba(181, 82, 45, 0.28);
+        }
+
+        .topbar-links {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .chip {
+            padding: 10px 14px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
+            background: rgba(255, 255, 255, 0.55);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .chip:hover,
+        .button:hover,
+        .button-secondary:hover,
+        .mini-card:hover,
+        .service-card:hover,
+        .case-card:hover,
+        .faq-item:hover,
+        .proof-card:hover,
+        .type-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .button,
+        .button-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 0 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+
+        .button {
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), #ce6a41);
+            box-shadow: 0 18px 30px rgba(181, 82, 45, 0.26);
+        }
+
+        .button-secondary {
+            color: var(--text);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        .hero {
+            padding: 42px 0 24px;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .hero-card,
+        .hero-side {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(61, 41, 24, 0.08);
+            border-radius: var(--radius-xl);
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card {
+            padding: 42px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            max-width: 12ch;
+            font-size: clamp(2.4rem, 5vw, 4.7rem);
+            line-height: 0.97;
+            letter-spacing: -0.05em;
+        }
+
+        .hero-copy {
+            max-width: 58ch;
+            margin-top: 22px;
+            font-size: 1.08rem;
+            color: var(--muted);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .hero-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .mini-card {
+            padding: 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.62);
+            transition: transform 0.25s ease;
+        }
+
+        .mini-card strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .mini-card span {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .hero-side {
+            padding: 24px;
+            display: grid;
+            gap: 18px;
+            align-content: space-between;
+            background:
+                linear-gradient(160deg, rgba(36, 75, 67, 0.96), rgba(20, 42, 37, 0.96)),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+            color: #f7efe5;
+        }
+
+        .side-panel {
+            padding: 22px;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .side-panel p,
+        .metric-item p,
+        .service-card p,
+        .case-card p,
+        .proof-card p,
+        .type-card p,
+        .faq-item p,
+        .section-intro p,
+        .subtle {
+            color: inherit;
+        }
+
+        .side-panel p,
+        .metric-item span,
+        .case-meta,
+        .faq-item p,
+        .proof-card p,
+        .section-intro p,
+        .service-card p,
+        .type-card p,
+        .subtle,
+        .note {
+            color: rgba(247, 239, 229, 0.76);
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .metric-item {
+            padding: 18px;
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .metric-item strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.55rem;
+            line-height: 1;
+        }
+
+        section {
+            padding: 26px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: end;
+            margin-bottom: 22px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(1.9rem, 3.8vw, 3rem);
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+        }
+
+        .section-intro {
+            max-width: 58ch;
+            color: var(--muted);
+        }
+
+        .proof-grid,
+        .type-grid,
+        .service-grid,
+        .case-grid,
+        .faq-grid,
+        .stats-strip {
+            display: grid;
+            gap: 18px;
+        }
+
+        .proof-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .proof-card,
+        .type-card,
+        .service-card,
+        .case-card,
+        .faq-item,
+        .contact-panel,
+        .stats-strip > div {
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--line);
+            background: var(--surface);
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease;
+        }
+
+        .proof-card strong,
+        .type-card strong,
+        .service-card strong,
+        .faq-item strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .proof-card p,
+        .type-card p,
+        .service-card p,
+        .case-card p,
+        .faq-item p,
+        .contact-panel p,
+        .stats-strip p,
+        .subtle,
+        .note {
+            color: var(--muted);
+        }
+
+        .proof-card::before,
+        .type-card::before,
+        .service-card::before,
+        .faq-item::before {
+            content: "";
+            display: inline-block;
+            width: 38px;
+            height: 3px;
+            margin-bottom: 14px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary), rgba(181, 82, 45, 0.18));
+        }
+
+        .accent-band {
+            margin-top: 12px;
+            padding: 28px;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(140deg, #1d433b, #315f55 74%, #51796f 100%);
+            color: #f8f1e8;
+            box-shadow: var(--shadow);
+        }
+
+        .accent-band h2,
+        .accent-band p,
+        .accent-band .note {
+            color: inherit;
+        }
+
+        .accent-band-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .accent-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .accent-list div {
+            padding: 16px 18px;
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .type-grid,
+        .service-grid,
+        .faq-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .stats-strip {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .stats-strip strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .case-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .case-card {
+            display: grid;
+            gap: 18px;
+        }
+
+        .case-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .case-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.92rem;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .workflow-step {
+            padding: 22px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--line);
+            background: rgba(255, 250, 242, 0.8);
+            box-shadow: var(--shadow);
+        }
+
+        .workflow-step span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            margin-bottom: 12px;
+            border-radius: 50%;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            font-weight: 800;
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+            gap: 18px;
+        }
+
+        .contact-panel h2 {
+            font-size: clamp(1.9rem, 3.8vw, 3rem);
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        footer {
+            padding: 16px 0 44px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 1080px) {
+            .hero-layout,
+            .accent-band-grid,
+            .contact-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .proof-grid,
+            .type-grid,
+            .service-grid,
+            .case-grid,
+            .stats-strip,
+            .workflow {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .shell {
+                width: min(var(--max-width), calc(100% - 20px));
+            }
+
+            .topbar-inner,
+            .section-heading {
+                align-items: start;
+                flex-direction: column;
+            }
+
+            .hero-card,
+            .hero-side,
+            .proof-card,
+            .type-card,
+            .service-card,
+            .case-card,
+            .faq-item,
+            .contact-panel,
+            .stats-strip > div,
+            .workflow-step,
+            .accent-band {
+                padding: 20px;
+            }
+
+            .hero-list,
+            .metric-grid,
+            .proof-grid,
+            .type-grid,
+            .service-grid,
+            .case-grid,
+            .faq-grid,
+            .stats-strip,
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <div class="brand">
+                <div class="brand-mark">MZ</div>
+                <div>
+                    <div>Б/У Мезонины</div>
+                    <div class="subtle">Подбор, доставка и монтаж под ключ</div>
+                </div>
+            </div>
+            <nav class="topbar-links">
+                <a class="chip" href="#types">Типы решений</a>
+                <a class="chip" href="#services">Услуги</a>
+                <a class="chip" href="#cases">Кейсы</a>
+                <a class="button" href="#contact">Получить расчет</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="shell hero-layout">
+                <div class="hero-card">
+                    <div class="eyebrow">Б/у мезонины для склада под ключ</div>
+                    <h1>Б/у мезонины для склада с доставкой, монтажом и адаптацией под объект</h1>
+                    <p class="hero-copy">
+                        Подбираем и поставляем б/у мезонины для склада, комплектации, офиса и производства.
+                        Проверяем состояние конструкции, рассчитываем конфигурацию под помещение,
+                        организуем доставку, сборку и дооснащение под ключ.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button" href="#contact">Получить расчет стоимости</a>
+                        <a class="button-secondary" href="#inspection">Как проверяем б/у мезонины</a>
+                    </div>
+                    <div class="hero-list">
+                        <div class="mini-card">
+                            <strong>Экономия по сравнению с новым мезонином</strong>
+                            <span>Снижение капитальных затрат без отказа от рабочего решения.</span>
+                        </div>
+                        <div class="mini-card">
+                            <strong>Быстрый запуск проекта</strong>
+                            <span>Без ожидания полного цикла изготовления новой конструкции.</span>
+                        </div>
+                        <div class="mini-card">
+                            <strong>Проверка перед поставкой</strong>
+                            <span>Ревизия геометрии, узлов, крепежа и допустимых нагрузок.</span>
+                        </div>
+                        <div class="mini-card">
+                            <strong>Монтаж и адаптация под объект</strong>
+                            <span>Доставка, сборка, доработка и дооснащение в одном договоре.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="hero-side">
+                    <div class="side-panel">
+                        <strong>Почему выбирают б/у мезонин</strong>
+                        <p class="note">
+                            Когда нужно быстро увеличить полезную площадь склада без долгого ожидания
+                            и переплаты за новое изготовление. Основной продукт здесь не металл сам по себе,
+                            а готовое решение под конкретный объект и задачу бизнеса.
+                        </p>
+                    </div>
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <strong>до 60%</strong>
+                            <span>Экономии по сравнению с новым аналогом</span>
+                        </div>
+                        <div class="metric-item">
+                            <strong>1 проект</strong>
+                            <span>Подбор, доставка, монтаж и дооснащение</span>
+                        </div>
+                        <div class="metric-item">
+                            <strong>от 1 дня</strong>
+                            <span>На первичный подбор и предварительный расчет</span>
+                        </div>
+                        <div class="metric-item">
+                            <strong>1 подрядчик</strong>
+                            <span>Стеллажи и допэлементы идут как часть комплектации</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section>
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Коммерческий смысл</div>
+                        <h2>Почему главная должна продавать именно б/у мезонины, а не “все для склада”</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Пользователь должен за несколько секунд понять, что компания специализируется именно
+                            на б/у мезонинах для склада и берет на себя весь цикл работ. Это усиливает доверие,
+                            делает оффер понятнее и помогает вести трафик на главную без размытия интента.
+                        </p>
+                    </div>
+                </div>
+                <div class="proof-grid">
+                    <article class="proof-card">
+                        <strong>Узкий оффер</strong>
+                        <p>Позиционирование строится вокруг б/у мезонинов, а не всей складской тематики.</p>
+                    </article>
+                    <article class="proof-card">
+                        <strong>Коммерческая понятность</strong>
+                        <p>Экономия, скорость запуска и монтаж под ключ объясняются с первого экрана.</p>
+                    </article>
+                    <article class="proof-card">
+                        <strong>Снятие главного страха</strong>
+                        <p>Отдельно показывается, как проверяется состояние и безопасность конструкции.</p>
+                    </article>
+                    <article class="proof-card">
+                        <strong>Вторичный акцент на стеллажи</strong>
+                        <p>Стеллажи не спорят с оффером, а остаются дополнительной комплектацией проекта.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="shell accent-band">
+                <div class="accent-band-grid">
+                    <div>
+                        <div class="eyebrow">Ключевой блок</div>
+                        <h2>Когда купить б/у мезонин выгоднее, чем заказывать новый</h2>
+                        <p class="note" style="margin-top: 16px; max-width: 56ch;">
+                            Б/у мезонин лучше подавать не как компромисс, а как разумно выгодное решение.
+                            Клиент получает нужную площадь быстрее, сокращает бюджет проекта и при этом понимает,
+                            что конструкция проходит проверку и адаптацию под реальный объект.
+                        </p>
+                    </div>
+                    <div class="accent-list">
+                        <div>Когда нужно быстро запустить дополнительный уровень хранения без ожидания производства.</div>
+                        <div>Когда бюджет ограничен, но требуется рабочая и безопасная конструкция.</div>
+                        <div>Когда типовая задача позволяет адаптировать существующее решение под объект.</div>
+                        <div>Когда вместе с мезонином нужны доставка, сборка, доработка и дооснащение.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="types">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Типы решений</div>
+                        <h2>Какие б/у мезонины можно предлагать на главной как основные направления</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Вместо широкого каталога лучше показывать основные сценарии применения. Это усиливает SEO,
+                            потому что закрывает реальные кластеры спроса, и повышает конверсию, потому что посетитель
+                            сразу видит решение своей задачи.
+                        </p>
+                    </div>
+                </div>
+                <div class="type-grid">
+                    <article class="type-card">
+                        <strong>Б/у мезонины для хранения</strong>
+                        <p>Для увеличения вместимости склада без переезда и без капитальной перестройки помещения.</p>
+                    </article>
+                    <article class="type-card">
+                        <strong>Б/у мезонины для комплектации</strong>
+                        <p>Для создания второго уровня под упаковку, подбор заказов и операционные процессы.</p>
+                    </article>
+                    <article class="type-card">
+                        <strong>Б/у мезонины под офисные зоны</strong>
+                        <p>Для размещения кабинетов, архива, постов контроля и административных помещений.</p>
+                    </article>
+                    <article class="type-card">
+                        <strong>Б/у мезонины с адаптацией под объект</strong>
+                        <p>Когда готовую конструкцию нужно подстроить под высоту, площадь и режим работы помещения.</p>
+                    </article>
+                    <article class="type-card">
+                        <strong>Б/у мезонины с монтажом под ключ</strong>
+                        <p>Полный цикл от подбора и логистики до сборки, ограждений, настилов и запуска.</p>
+                    </article>
+                    <article class="type-card">
+                        <strong>Комплексные проекты со стеллажами</strong>
+                        <p>Стеллажи и другие элементы хранения подключаются как вторичная комплектация проекта.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="inspection">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Доверие к б/у</div>
+                        <h2>Как снять главный страх при покупке б/у мезонина</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            На главной нужен отдельный блок про ревизию состояния и безопасность. Именно он отделяет
+                            сильную коммерческую страницу от обычной SEO-посадочной, где есть только слова про цену и выгоду.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <strong>Проверка геометрии конструкции</strong>
+                        <p>Оцениваем состояние металлокаркаса и ключевых несущих элементов перед повторным монтажом.</p>
+                    </article>
+                    <article class="service-card">
+                        <strong>Ревизия соединений и крепежа</strong>
+                        <p>Смотрим узлы, заменяем изношенные позиции и исключаем сомнительные элементы из проекта.</p>
+                    </article>
+                    <article class="service-card">
+                        <strong>Оценка допустимых нагрузок</strong>
+                        <p>Подтверждаем, где конструкция подходит, а где безопаснее предложить другое решение.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Сопутствующие услуги</div>
+                        <h2>Какие услуги должны усиливать продажу б/у мезонинов</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Доставка, сборка, доработка и дооснащение не должны жить отдельно от оффера. Они повышают
+                            ценность главной, потому что клиент видит не разовый товар, а готовый проект под ключ.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <strong>Выезд и замер</strong>
+                        <p>Сбор исходных данных по высоте помещения, нагрузке, проходам и зонам работы.</p>
+                    </article>
+                    <article class="service-card">
+                        <strong>Подбор подходящего б/у решения</strong>
+                        <p>Оценка наличия, конфигурации и возможности адаптации под объект.</p>
+                    </article>
+                    <article class="service-card">
+                        <strong>Доставка на объект</strong>
+                        <p>Логистика под сроки клиента, без раздробления проекта на разных подрядчиков.</p>
+                    </article>
+                    <article class="service-card">
+                        <strong>Сборка и монтаж</strong>
+                        <p>Полный цикл запуска на площадке с учетом безопасности и эксплуатационных требований.</p>
+                    </article>
+                    <article class="service-card">
+                        <strong>Доработка и дооснащение</strong>
+                        <p>Лестницы, ограждения, настилы, проходы и другие элементы под конкретный сценарий использования.</p>
+                    </article>
+                    <article class="service-card">
+                        <strong>Стеллажи как дополнительная комплектация</strong>
+                        <p>Вторичный блок: только когда они помогают сделать мезонинный проект цельным и удобным.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Блок доверия</div>
+                        <h2>Какие коммерческие цифры усиливают доверие на главной</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Даже если часть показателей потом уточнится, в структуре главной уже должны быть места
+                            под конкретные цифры. Без них страница выглядит как обещание, а не как сильное коммерческое предложение.
+                        </p>
+                    </div>
+                </div>
+                <div class="stats-strip">
+                    <div>
+                        <strong>до 60%</strong>
+                        <p>возможной экономии по сравнению с новым мезонином</p>
+                    </div>
+                    <div>
+                        <strong>от 1 дня</strong>
+                        <p>на предварительный подбор и расчет решения под объект</p>
+                    </div>
+                    <div>
+                        <strong>1 подрядчик</strong>
+                        <p>на поставку, логистику, монтаж и доработку конструкции</p>
+                    </div>
+                    <div>
+                        <strong>100%</strong>
+                        <p>фокуса именно на мезонинах и услугах вокруг них</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Кейсы</div>
+                        <h2>Как показывать кейсы по б/у мезонинам, чтобы они продавали</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Кейсы должны доказывать, что вы не просто перепродаете конструкции, а подбираете, адаптируете
+                            и запускаете рабочее решение. Лучшие кейсы показывают сроки, итоговую площадь и выгоду относительно нового проекта.
+                        </p>
+                    </div>
+                </div>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <div class="case-tag">Склад хранения</div>
+                        <h3>Б/у мезонин для расширения зоны хранения без переезда</h3>
+                        <p>
+                            Для действующего склада подобрали б/у конструкцию, адаптировали под высоту помещения,
+                            организовали доставку и монтаж в сжатые сроки.
+                        </p>
+                        <div class="case-meta">
+                            <span>+120 м² полезной площади</span>
+                            <span>Монтаж за 5 дней</span>
+                            <span>Экономия относительно нового</span>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-tag">Комплектация заказов</div>
+                        <h3>Второй уровень под упаковку и операционные процессы</h3>
+                        <p>
+                            Клиенту нужен был быстрый запуск без длинного цикла закупки новой конструкции. Решение собрали
+                            на базе б/у мезонина с дооснащением настилом и ограждениями.
+                        </p>
+                        <div class="case-meta">
+                            <span>Быстрый ввод в работу</span>
+                            <span>Доработка под объект</span>
+                            <span>Монтаж под ключ</span>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-tag">Комплексный проект</div>
+                        <h3>Б/у мезонин с дополнительными стеллажами как частью комплектации</h3>
+                        <p>
+                            Основой проекта был б/у мезонин, а стеллажи добавили только как вторичное оснащение для
+                            удобного размещения товара и логики движения внутри площадки.
+                        </p>
+                        <div class="case-meta">
+                            <span>Фокус на мезонине</span>
+                            <span>Стеллажи как дополнение</span>
+                            <span>Единый подрядчик</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Сценарий продажи</div>
+                        <h2>Как провести клиента от заявки до монтажа без лишних вопросов</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Для B2B-продукта важно показать прозрачный процесс работ. Это снижает тревогу, помогает
+                            согласовать ожидания и повышает вероятность обращения уже с главной страницы.
+                        </p>
+                    </div>
+                </div>
+                <div class="workflow">
+                    <article class="workflow-step">
+                        <span>1</span>
+                        <h3>Заявка</h3>
+                        <p class="subtle">Получаем задачу, размеры помещения и сценарий использования.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span>2</span>
+                        <h3>Подбор</h3>
+                        <p class="subtle">Смотрим, какой б/у мезонин подходит по конфигурации и нагрузке.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span>3</span>
+                        <h3>Проверка</h3>
+                        <p class="subtle">Проводим ревизию состояния и определяем объем доработок.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span>4</span>
+                        <h3>Поставка</h3>
+                        <p class="subtle">Организуем логистику и готовим комплект к установке на объекте.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span>5</span>
+                        <h3>Монтаж</h3>
+                        <p class="subtle">Собираем, дооснащаем и вводим конструкцию в работу.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">FAQ</div>
+                        <h2>Какие вопросы о б/у мезонинах нужно закрыть прямо на главной</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Этот блок закрывает ключевые сомнения: цена, сроки, монтаж, состояние конструкции,
+                            география работы и вторичная роль стеллажей в проекте.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <strong>Сколько стоит б/у мезонин?</strong>
+                        <p>Стоимость зависит от площади, конфигурации, состояния и объема доработок под конкретный объект.</p>
+                    </article>
+                    <article class="faq-item">
+                        <strong>Как понять, что б/у решение безопасно?</strong>
+                        <p>Через отдельный блок проверки: ревизия каркаса, соединений, нагрузки и замена изношенных элементов.</p>
+                    </article>
+                    <article class="faq-item">
+                        <strong>Делаете ли вы доставку и сборку?</strong>
+                        <p>Да, именно это и усиливает оффер: клиент получает не конструкцию отдельно, а проект под ключ.</p>
+                    </article>
+                    <article class="faq-item">
+                        <strong>Можно ли адаптировать мезонин под мой склад?</strong>
+                        <p>Да, если исходная конструкция подходит по геометрии и допустимым нагрузкам после проверки.</p>
+                    </article>
+                    <article class="faq-item">
+                        <strong>Стеллажи вы тоже продаете?</strong>
+                        <p>Да, но как дополнительную комплектацию к мезонинному проекту, а не как основной продукт главной.</p>
+                    </article>
+                    <article class="faq-item">
+                        <strong>Для каких объектов это подходит?</strong>
+                        <p>Для складов, зон комплектации, производственных помещений, архивов и офисных надстроек.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="shell contact-wrap">
+                <div class="contact-panel">
+                    <div class="eyebrow">Финальный оффер</div>
+                    <h2>Получите подбор б/у мезонина с расчетом стоимости, доставки и монтажа</h2>
+                    <p style="margin-top: 16px; max-width: 54ch;">
+                        Главная должна приводить к понятному действию: не просто к абстрактной заявке,
+                        а к подбору решения под ваш объект. Это сильнее работает и на конверсию, и на коммерческий интент.
+                    </p>
+                    <div class="contact-actions">
+                        <a class="button" href="tel:+74950000000">Позвонить и обсудить проект</a>
+                        <a class="button-secondary" href="mailto:info@example.com">Отправить параметры объекта</a>
+                    </div>
+                </div>
+                <div class="contact-panel">
+                    <strong>Что запросить у клиента в форме или звонке</strong>
+                    <p style="margin-top: 12px;">
+                        Высоту помещения, желаемую площадь, сценарий использования, ориентир по нагрузке,
+                        регион объекта и необходимость в монтаже. Этого достаточно для первичного подбора
+                        б/у мезонина и понимания, нужно ли добавлять стеллажи как дополнительную комплектацию.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="shell">
+            Главная под SEO и конверсию: б/у мезонины как основной продукт, услуги под ключ и вторичная роль стеллажей.
+        </div>
+    </footer>
+</body>
+</html>
