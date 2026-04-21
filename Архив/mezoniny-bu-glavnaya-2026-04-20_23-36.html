@@ -24,37 +24,8 @@
             --max-width: 1180px;
         }
 
-        * {
-            box-sizing: border-box;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Segoe UI", "Trebuchet MS", sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(circle at top left, rgba(181, 82, 45, 0.18), transparent 32%),
-                radial-gradient(circle at right 20%, rgba(36, 75, 67, 0.14), transparent 26%),
-                linear-gradient(180deg, #f8f1e8 0%, #f2ebdf 48%, #efe8dd 100%);
-            line-height: 1.5;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        h1,
-        h2,
+            <div class="shell topbar-inner">
         h3,
         p {
             margin: 0;
@@ -72,6 +43,29 @@
             backdrop-filter: blur(14px);
             background: rgba(245, 239, 229, 0.86);
             border-bottom: 1px solid rgba(61, 41, 24, 0.08);
+        }
+
+        .topbar-meta {
+            border-bottom: 1px solid rgba(61, 41, 24, 0.08);
+        }
+
+        .topbar-meta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 18px;
+            padding: 8px 0;
+        }
+
+        .topbar-meta-link {
+            font-size: 0.92rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .topbar-meta-link span {
+            color: var(--muted);
+            font-weight: 600;
         }
 
         .topbar-inner {
@@ -131,6 +125,7 @@
             border-radius: 999px;
             font-weight: 700;
             transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+            text-decoration: none;
         }
 
         .chip {
@@ -203,7 +198,6 @@
         .form-panel,
         .card,
         .scenario-card,
-        .case-card,
         .faq-item,
         .step-card,
         .stats-card,
@@ -211,8 +205,27 @@
             padding: 24px;
         }
 
+        .case-card {
+            padding: 0;
+            overflow: hidden;
+        }
+
         .gallery-card {
             overflow: hidden;
+        }
+
+        .form-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .form-actions .button,
+        .form-actions .button-secondary {
+            width: 100%;
+            line-height: 1.2;
+            text-align: center;
         }
 
         .gallery-card-content {
@@ -433,11 +446,18 @@
             font-weight: 600;
         }
 
+        .required-mark {
+            color: #ffcfb8;
+            margin-left: 4px;
+            font-weight: 800;
+        }
+
         .form-field input,
         .form-field select,
         .form-field textarea,
         .form-field-full textarea,
         .form-field-full input {
+            box-sizing: border-box;
             width: 100%;
             padding: 14px 16px;
             border-radius: 14px;
@@ -478,6 +498,12 @@
             margin-top: 14px;
             font-size: 0.9rem;
             color: rgba(247, 239, 229, 0.66);
+        }
+
+        .form-status {
+            margin-top: 12px;
+            font-size: 0.92rem;
+            color: rgba(247, 239, 229, 0.82);
         }
 
         .scenario-card,
@@ -546,6 +572,23 @@
             object-fit: cover;
         }
 
+        .case-media {
+            aspect-ratio: 16 / 9;
+            background: rgba(36, 75, 67, 0.08);
+        }
+
+        .case-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-body {
+            display: grid;
+            gap: 14px;
+            padding: 24px;
+        }
+
         .step-card span {
             display: inline-flex;
             align-items: center;
@@ -577,6 +620,12 @@
             .hero-layout,
             .contact-wrap,
             .cta-band,
+
+            .topbar-meta-inner {
+                flex-direction: column;
+                align-items: start;
+                gap: 6px;
+            }
             .final-grid,
             .section-heading {
                 grid-template-columns: 1fr;
@@ -598,6 +647,7 @@
             .shell {
                 width: min(var(--max-width), calc(100% - 20px));
             }
+
 
             .topbar-inner,
             .topbar-links,
@@ -632,7 +682,8 @@
             .workflow,
             .stats-strip,
             .form-grid,
-            .quick-metrics {
+            .quick-metrics,
+            .form-actions {
                 grid-template-columns: 1fr;
             }
 
@@ -644,6 +695,13 @@
 </head>
 <body>
     <header class="topbar">
+        <div class="topbar-meta">
+            <div class="shell topbar-meta-inner">
+                <a class="topbar-meta-link" href="tel:+74951507743"><span>МСК:</span> +7 (495) 150-77-43</a>
+                <a class="topbar-meta-link" href="tel:+79315213971"><span>Мобильный:</span> +7 (931) 521-39-71</a>
+                <a class="topbar-meta-link" href="mailto:info@skladmsk.com"><span>E-mail:</span> info@skladmsk.com</a>
+            </div>
+        </div>
         <div class="shell topbar-inner">
             <div class="brand">
                 <div class="brand-mark">MZ</div>
@@ -665,11 +723,11 @@
         <section class="hero">
             <div class="shell hero-layout">
                 <div class="hero-card">
-                    <div class="eyebrow">Для склада, комплектации и производства</div>
+                    <div class="eyebrow">Для склада, комплектации и производственных задач</div>
                     <h1>Б/у мезонины</h1>
                     <p class="hero-copy">
-                        Подбираем б/у мезонины под задачу, площадь и нагрузку.
-                        При необходимости берем на себя проверку, доставку, монтаж и адаптацию.
+                        Подбираем б/у мезонины по площади, ориентиру по нагрузке и формату работы площадки.
+                        Проверяем конструкцию перед поставкой и при необходимости берем на себя доставку, монтаж и запуск.
                     </p>
                     <div class="hero-actions">
                         <a class="button" href="#lead-form">Получить расчет за 1 день</a>
@@ -703,8 +761,8 @@
                     <div class="badge">Расчетный запрос с главной</div>
                     <h2 style="margin-top: 14px;">Получите расчет и подбор б/у мезонина</h2>
                     <p style="margin-top: 14px;">
-                        Оставьте параметры объекта, и мы быстро скажем, какой вариант подойдет,
-                        нужна ли адаптация и во что ориентировочно встанут доставка и монтаж.
+                        Для предварительного подбора сразу укажите задачу, площадь, ориентир по нагрузке и параметры объекта.
+                        Этих данных достаточно, чтобы быстро вернуться с понятным следующим шагом.
                     </p>
 
                     <div class="quick-metrics">
@@ -718,55 +776,49 @@
                         </div>
                     </div>
 
-                    <form action="#" method="post">
+                    <form action="mailto:info@skladmsk.com" method="post" enctype="text/plain" data-mailto-form data-form-name="Запрос с hero">
                         <div class="form-grid">
                             <div class="form-field">
                                 <label for="hero-name">Имя</label>
-                                <input id="hero-name" name="name" type="text" placeholder="Как к вам обращаться" required>
+                                <input id="hero-name" name="name" type="text" placeholder="Как к вам обращаться">
                             </div>
                             <div class="form-field">
-                                <label for="hero-phone">Телефон</label>
+                                <label for="hero-phone">Телефон<span class="required-mark">*</span></label>
                                 <input id="hero-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
                             </div>
                             <div class="form-field">
-                                <label for="hero-email">E-mail</label>
-                                <input id="hero-email" name="email" type="email" placeholder="info@company.ru">
+                                <label for="hero-email">E-mail<span class="required-mark">*</span></label>
+                                <input id="hero-email" name="email" type="email" placeholder="info@company.ru" required>
                             </div>
                             <div class="form-field">
-                                <label for="hero-task">Задача</label>
-                                <select id="hero-task" name="task">
+                                <label for="hero-task">Задача<span class="required-mark">*</span></label>
+                                <select id="hero-task" name="task" required>
                                     <option value="">Выберите задачу</option>
                                     <option value="storage">Для склада и хранения</option>
                                     <option value="picking">Для комплектации</option>
-                                    <option value="office">Под офис или архив</option>
+                                    <option value="office">Офис, архив или вспомогательные зоны</option>
                                     <option value="production">Для производства</option>
                                     <option value="service">Нужен монтаж или доставка</option>
                                 </select>
                             </div>
                             <div class="form-field">
-                                <label for="hero-area">Площадь</label>
-                                <input id="hero-area" name="area" type="text" placeholder="Например, 120-180 м2">
+                                <label for="hero-area">Площадь<span class="required-mark">*</span></label>
+                                <input id="hero-area" name="area" type="text" placeholder="Например, 120-180 м2" required>
                             </div>
                             <div class="form-field">
-                                <label for="hero-load">Нагрузка</label>
-                                <input id="hero-load" name="load" type="text" placeholder="Например, 500 кг/м2">
+                                <label for="hero-load">Нагрузка или ориентир<span class="required-mark">*</span></label>
+                                <input id="hero-load" name="load" type="text" placeholder="Например, 500 кг/м2 или тип товара" required>
                             </div>
                             <div class="form-field-full">
-                                <label for="hero-message">Параметры объекта</label>
-                                <textarea id="hero-message" name="message" placeholder="Укажите высоту помещения, город, сроки запуска, тип товара или рабочих зон, необходимость в монтаже и дооснащении"></textarea>
+                                <label for="hero-message">Параметры объекта<span class="required-mark">*</span></label>
+                                <textarea id="hero-message" name="message" placeholder="Город, высота помещения, задача, ограничения по монтажу, сроки запуска" required></textarea>
                             </div>
                         </div>
-                        <div class="contact-actions" style="margin-top: 18px;">
+                        <div class="contact-actions form-actions">
                             <button class="button" type="submit">Получить подбор и расчет</button>
-                            <a class="button-secondary" href="mailto:info@skladmsk.com">Отправить параметры на e-mail</a>
+                            <a class="button-secondary" href="mailto:info@skladmsk.com">Отправить на e-mail</a>
                         </div>
                     </form>
-
-                    <div class="form-note">
-                        Телефон МСК: <a class="contact-link" href="tel:+74951507743">+7 (495) 150-77-43</a>
-                        | Мобильный: <a class="contact-link" href="tel:+79315213971">+7 (931) 521-39-71</a>
-                        | E-mail: <a class="contact-link" href="mailto:info@skladmsk.com">info@skladmsk.com</a>
-                    </div>
                 </aside>
             </div>
         </section>
@@ -826,7 +878,7 @@
                         <p>Когда нужно быстро увеличить полезную площадь хранения без переезда и долгой перестройки склада.</p>
                         <div class="scenario-actions">
                             <a class="scenario-link" href="#lead-form">Рассчитать площадь хранения</a>
-                            <a class="scenario-link" href="/mezoniny-b-u/dlya-sklada/">Подробнее по направлению</a>
+                            <a class="scenario-link" href="#cases">Смотреть похожие кейсы</a>
                         </div>
                     </article>
                     <article class="scenario-card">
@@ -834,58 +886,17 @@
                         <p>Под упаковку, подбор заказов и разделение потоков, когда нужен отдельный операционный уровень.</p>
                         <div class="scenario-actions">
                             <a class="scenario-link" href="#lead-form">Рассчитать зону комплектации</a>
-                            <a class="scenario-link" href="/mezoniny-b-u/dlya-komplektacii/">Подробнее по направлению</a>
+                            <a class="scenario-link" href="#cases">Смотреть похожие кейсы</a>
                         </div>
                     </article>
                     <article class="scenario-card">
-                        <strong>Б/у мезонины под офис и архив</strong>
-                        <p>Когда нужно поднять кабинеты, архив, посты контроля или другие административные зоны внутри объекта.</p>
-                        <div class="scenario-actions">
-                            <a class="scenario-link" href="#lead-form">Подобрать офисный вариант</a>
-                            <a class="scenario-link" href="/mezoniny-b-u/pod-ofis/">Подробнее по направлению</a>
-                        </div>
-                    </article>
-                    <article class="scenario-card">
-                        <strong>Монтаж б/у мезонинов</strong>
-                        <p>Если конструкция уже есть или нужен подрядчик на сборку, перенос, доработку и повторный запуск.</p>
-                        <div class="scenario-actions">
-                            <a class="scenario-link" href="#lead-form">Обсудить монтаж</a>
-                            <a class="scenario-link" href="/uslugi/montazh-b-u-mezoninov/">Подробнее по услуге</a>
-                        </div>
-                    </article>
-                    <article class="scenario-card">
-                        <strong>Доставка и логистика</strong>
-                        <p>Когда нужно уложиться в сроки запуска и без сбоев организовать поставку по Москве, МО или регионам.</p>
-                        <div class="scenario-actions">
-                            <a class="scenario-link" href="#lead-form">Запросить доставку</a>
-                            <a class="scenario-link" href="/uslugi/dostavka-mezoninov/">Подробнее по услуге</a>
-                        </div>
-                    </article>
-                    <article class="scenario-card">
-                        <strong>Подбор и адаптация под объект</strong>
-                        <p>Когда нужно понять, что реально подойдет по высоте, площади, нагрузке и схеме движения внутри объекта.</p>
+                        <strong>Б/у мезонины под задачу объекта</strong>
+                        <p>Когда нужно подобрать решение по высоте, площади, нагрузке и формату работы площадки без лишних догадок.</p>
                         <div class="scenario-actions">
                             <a class="scenario-link" href="#lead-form">Отправить параметры объекта</a>
-                            <a class="scenario-link" href="/uslugi/podbor-i-adaptaciya/">Подробнее по услуге</a>
+                            <a class="scenario-link" href="#inspection">Как идет проверка</a>
                         </div>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="shell cta-band">
-                <div>
-                    <div class="eyebrow">Быстрый следующий шаг</div>
-                    <h2>Отправьте параметры и получите первый расчет по задаче, площади и нагрузке</h2>
-                    <p style="margin-top: 14px; max-width: 58ch;">
-                        Для предварительного расчета обычно хватает площади, высоты помещения, задачи и ориентира по нагрузке.
-                        Этого достаточно, чтобы быстро вернуться с понятным первым предложением.
-                    </p>
-                </div>
-                <div class="inline-actions" style="justify-content: flex-end;">
-                    <a class="button" href="#lead-form">Отправить параметры и получить расчет</a>
-                    <a class="button-secondary" href="tel:+74951507743">Позвонить и обсудить задачу</a>
                 </div>
             </div>
         </section>
@@ -895,12 +906,12 @@
                 <div class="section-heading">
                     <div>
                         <div class="eyebrow">Как проверяем</div>
-                        <h2>Главное возражение по б/у мезонинам снимается не словами, а технической проверкой</h2>
+                        <h2>Как проверяем б/у мезонин перед поставкой и что берем на себя дальше</h2>
                     </div>
                     <div class="section-intro">
                         <p>
-                            Конструкция не покупается вслепую.
-                            Сначала проверяем состояние и сопоставляем решение с реальной задачей объекта, и только потом подтверждаем формат проекта.
+                            Вы покупаете не металл вслепую, а решение под задачу объекта.
+                            Сначала проверяем состояние конструкции, затем берем на себя логистику, монтаж и запуск.
                         </p>
                     </div>
                 </div>
@@ -919,34 +930,7 @@
                     </article>
                     <article class="card">
                         <strong>Проверка под задачу объекта</strong>
-                        <p>Учитываем высоту, планировку, проходы, тип груза, режим работы и необходимость в дооснащении.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="shell">
-                <div class="section-heading">
-                    <div>
-                        <div class="eyebrow">Что входит в проект</div>
-                        <h2>Проект закрывается под ключ: от подбора решения до запуска на объекте</h2>
-                    </div>
-                    <div class="section-intro">
-                        <p>
-                            Чем понятнее состав работ, тем проще клиенту принять решение.
-                            Вы получаете не только конструкцию, а весь проект целиком: подбор, доставку, монтаж и запуск на объекте.
-                        </p>
-                    </div>
-                </div>
-                <div class="service-grid">
-                    <article class="card">
-                        <strong>Выезд и замер</strong>
-                        <p>Фиксируем высоту, планировку, маршруты движения и ограничения площадки до начала подбора.</p>
-                    </article>
-                    <article class="card">
-                        <strong>Подбор по задаче</strong>
-                        <p>Подбираем формат решения под хранение, комплектацию, офисные зоны или производственные задачи.</p>
+                        <p>Учитываем высоту, планировку, проходы, тип груза и формат работы площадки до подтверждения решения.</p>
                     </article>
                     <article class="card">
                         <strong>Доставка на объект</strong>
@@ -954,50 +938,7 @@
                     </article>
                     <article class="card">
                         <strong>Монтаж и запуск</strong>
-                        <p>Собираем конструкцию на площадке и вводим ее в работу с учетом требований безопасности.</p>
-                    </article>
-                    <article class="card">
-                        <strong>Дооснащение</strong>
-                        <p>Настилы, ограждения, лестницы и проходы под реальный режим эксплуатации, а не в отрыве от объекта.</p>
-                    </article>
-                    <article class="card">
-                        <strong>Адаптация и комплектация</strong>
-                        <p>При необходимости подключаем стеллажи и допэлементы как часть цельного мезонинного проекта.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="shell">
-                <div class="section-heading">
-                    <div>
-                        <div class="eyebrow">Факты и цифры</div>
-                        <h2>Сразу понятно, сколько можно сэкономить, как быстро получить расчет и кто ведет проект</h2>
-                    </div>
-                    <div class="section-intro">
-                        <p>
-                            Эти цифры сразу показывают выгоду: сколько можно сэкономить,
-                            как быстро получить расчет и кто отвечает за проект целиком.
-                        </p>
-                    </div>
-                </div>
-                <div class="stats-strip">
-                    <article class="stats-card">
-                        <strong>до 60%</strong>
-                        <p>экономии по сравнению с новым решением</p>
-                    </article>
-                    <article class="stats-card">
-                        <strong>от 1 дня</strong>
-                        <p>на первичный подбор и предварительный расчет</p>
-                    </article>
-                    <article class="stats-card">
-                        <strong>1 подрядчик</strong>
-                        <p>на подбор, доставку, монтаж и дооснащение</p>
-                    </article>
-                    <article class="stats-card">
-                        <strong>Россия</strong>
-                        <p>поставка по России с фокусом на Москву и МО</p>
+                        <p>Собираем, дооснащаем и вводим конструкцию в работу с учетом требований безопасности и задач объекта.</p>
                     </article>
                 </div>
             </div>
@@ -1007,159 +948,61 @@
             <div class="shell">
                 <div class="section-heading">
                     <div>
-                        <div class="eyebrow">Кейсы</div>
-                        <h2>Кейсы показывают результат проекта в цифрах, сроках и полезной площади</h2>
+                        <div class="eyebrow">Кейсы и фото</div>
+                        <h2>Кейсы и фото объектов показывают результат проекта в цифрах и на практике</h2>
                     </div>
                     <div class="section-intro">
                         <p>
-                            Эти примеры показывают результат проекта: дополнительную площадь,
-                            сроки запуска и выгоду по сравнению с новым решением.
+                            Здесь сразу видно и результат проекта, и то, как решение выглядит на объекте:
+                            дополнительная площадь, сроки запуска и реальная конфигурация мезонина.
                         </p>
                     </div>
                 </div>
                 <div class="case-grid">
                     <article class="case-card">
-                        <div class="case-tag">Хранение</div>
-                        <h3>Склад получил дополнительную площадь без переезда и остановки текущей работы</h3>
-                        <p>Подобрали конструкцию под высоту помещения, провели ревизию и смонтировали решение в короткий срок.</p>
-                        <div class="case-meta">
-                            <span>+120 м2 полезной площади</span>
-                            <span>Монтаж за 5 дней</span>
-                            <span>Бюджет ниже нового проекта</span>
+                        <div class="case-media">
+                            <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-1.jpeg" alt="Б/у мезонин для хранения на складе">
+                        </div>
+                        <div class="case-body">
+                            <div class="case-tag">Хранение</div>
+                            <h3>Склад получил дополнительную площадь без переезда и остановки текущей работы</h3>
+                            <p>Подобрали конструкцию под высоту помещения, провели ревизию и смонтировали решение в короткий срок.</p>
+                            <div class="case-meta">
+                                <span>+120 м2 полезной площади</span>
+                                <span>Монтаж за 5 дней</span>
+                                <span>Бюджет ниже нового проекта</span>
+                            </div>
                         </div>
                     </article>
                     <article class="case-card">
-                        <div class="case-tag">Комплектация</div>
-                        <h3>Для e-commerce-склада быстро запустили второй уровень под упаковку и подбор заказов</h3>
-                        <p>Собрали решение на базе б/у мезонина с настилом и ограждениями, чтобы отделить операционную зону от хранения.</p>
-                        <div class="case-meta">
-                            <span>Быстрый ввод в эксплуатацию</span>
-                            <span>Отдельная зона отбора</span>
-                            <span>Монтаж под ключ</span>
+                        <div class="case-media">
+                            <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-2.jpeg" alt="Б/у мезонин для комплектации и упаковки">
+                        </div>
+                        <div class="case-body">
+                            <div class="case-tag">Комплектация</div>
+                            <h3>Для e-commerce-склада быстро запустили второй уровень под упаковку и подбор заказов</h3>
+                            <p>Собрали решение на базе б/у мезонина с настилом и ограждениями, чтобы отделить операционную зону от хранения.</p>
+                            <div class="case-meta">
+                                <span>Быстрый ввод в эксплуатацию</span>
+                                <span>Отдельная зона отбора</span>
+                                <span>Монтаж под ключ</span>
+                            </div>
                         </div>
                     </article>
                     <article class="case-card">
-                        <div class="case-tag">Смешанный проект</div>
-                        <h3>Собрали мезонинный проект с дооснащением, а стеллажи подключили только как дополнение</h3>
-                        <p>Основой проекта был мезонин, а дополнительные элементы хранения встроили в общую схему уже после подбора основной конструкции.</p>
-                        <div class="case-meta">
-                            <span>Цельный проект под задачу</span>
-                            <span>Стеллажи как вторичный блок</span>
-                            <span>Один подрядчик</span>
+                        <div class="case-media">
+                            <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/about/about_sklad_1.jpg" alt="Б/у мезонин под смешанные и производственные задачи">
                         </div>
-                    </article>
-                </div>
-                <div class="inline-actions" style="margin-top: 22px; justify-content: center;">
-                    <a class="button" href="#lead-form">Обсудить похожую задачу</a>
-                    <a class="button-secondary" href="/keisy/">Смотреть больше кейсов</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery">
-            <div class="shell">
-                <div class="section-heading">
-                    <div>
-                        <div class="eyebrow">Фото объектов</div>
-                        <h2>Фото помогают увидеть реальные масштабы объектов и понять, как решение выглядит на практике</h2>
-                    </div>
-                    <div class="section-intro">
-                        <p>
-                            Фото показывают, что речь идет о реальных объектах,
-                            а не только о текстовом описании услуги.
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-grid">
-                    <article class="gallery-card">
-                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-1.jpeg" alt="Б/у мезонин на складе">
-                        <div class="gallery-card-content">
-                            <strong>Б/у мезонин для хранения</strong>
-                            <p>Решение для быстрого увеличения площади хранения без запуска нового производства с нуля.</p>
+                        <div class="case-body">
+                            <div class="case-tag">Смешанная задача</div>
+                            <h3>Под объект с разными функциями подобрали мезонин под хранение, обслуживание и рабочие зоны</h3>
+                            <p>Сопоставили геометрию помещения, режим работы площадки и ориентир по нагрузке, после чего собрали решение без нового изготовления с нуля.</p>
+                            <div class="case-meta">
+                                <span>Один проект под несколько задач</span>
+                                <span>Подбор под ограничения объекта</span>
+                                <span>Запуск без длинного цикла производства</span>
+                            </div>
                         </div>
-                    </article>
-                    <article class="gallery-card">
-                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-2.jpeg" alt="Мезонин для комплектации и упаковки">
-                        <div class="gallery-card-content">
-                            <strong>Зона комплектации</strong>
-                            <p>Отдельный уровень под упаковку, подбор заказов и разведение операционных потоков.</p>
-                        </div>
-                    </article>
-                    <article class="gallery-card">
-                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/about/about_sklad_1.jpg" alt="Складской объект компании">
-                        <div class="gallery-card-content">
-                            <strong>Склад и логистика</strong>
-                            <p>Логистическая база для комплектации, отгрузки и подготовки проектов к поставке.</p>
-                        </div>
-                    </article>
-                    <article class="gallery-card">
-                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/about/about_sklad_gal_4.jpg" alt="Пример металлоконструкций и объекта">
-                        <div class="gallery-card-content">
-                            <strong>Примеры объектов</strong>
-                            <p>Фрагменты реализованных решений и инфраструктуры, связанной с мезонинными проектами.</p>
-                        </div>
-                    </article>
-                    <article class="gallery-card">
-                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-1.jpeg" alt="Мезонин под архив и административные задачи">
-                        <div class="gallery-card-content">
-                            <strong>Офисные и архивные надстройки</strong>
-                            <p>Решение, где второй уровень используется под кабинеты, архив или зону контроля.</p>
-                        </div>
-                    </article>
-                    <article class="gallery-card">
-                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-2.jpeg" alt="Мезонин под рабочие процессы и производство">
-                        <div class="gallery-card-content">
-                            <strong>Производственные задачи</strong>
-                            <p>Формат решения для зон обслуживания, технологических участков и дополнительных рабочих площадей.</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="inline-actions" style="margin-top: 22px; justify-content: center;">
-                    <a class="button" href="#lead-form">Подобрать похожее решение</a>
-                    <a class="button-secondary" href="/foto-i-obekty/">Смотреть больше фото объектов</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="shell">
-                <div class="section-heading">
-                    <div>
-                        <div class="eyebrow">Как проходит проект</div>
-                        <h2>Понятный процесс помогает быстрее принять решение по заявке</h2>
-                    </div>
-                    <div class="section-intro">
-                        <p>
-                            Проект проходит понятные этапы: от первой заявки до запуска конструкции в работу.
-                            Это снимает часть тревоги еще до звонка и делает обращение проще.
-                        </p>
-                    </div>
-                </div>
-                <div class="workflow">
-                    <article class="step-card">
-                        <span>1</span>
-                        <h3>Заявка</h3>
-                        <p>Получаем размеры помещения, задачу, ориентир по срокам и предполагаемой нагрузке.</p>
-                    </article>
-                    <article class="step-card">
-                        <span>2</span>
-                        <h3>Подбор</h3>
-                        <p>Смотрим, какая конфигурация подходит по геометрии, площади и типу задачи.</p>
-                    </article>
-                    <article class="step-card">
-                        <span>3</span>
-                        <h3>Ревизия</h3>
-                        <p>Проверяем состояние каркаса, узлов и допустимые нагрузки перед поставкой.</p>
-                    </article>
-                    <article class="step-card">
-                        <span>4</span>
-                        <h3>Логистика</h3>
-                        <p>Планируем отгрузку, доставку и подготовку площадки к монтажу.</p>
-                    </article>
-                    <article class="step-card">
-                        <span>5</span>
-                        <h3>Монтаж</h3>
-                        <p>Собираем, дооснащаем и запускаем конструкцию в работу на объекте клиента.</p>
                     </article>
                 </div>
             </div>
@@ -1181,10 +1024,6 @@
                 </div>
                 <div class="faq-grid">
                     <article class="faq-item">
-                        <strong>Сколько стоит б/у мезонин?</strong>
-                        <p>Стоимость зависит от площади, конфигурации, состояния, объема доработок, доставки и монтажа.</p>
-                    </article>
-                    <article class="faq-item">
                         <strong>Как понять, что конструкция безопасна?</strong>
                         <p>Через ревизию каркаса, узлов, крепежа и сопоставление допустимой нагрузки с вашей задачей.</p>
                     </article>
@@ -1193,16 +1032,8 @@
                         <p>Да, если исходная база подходит по геометрии и после проверки допускает безопасную адаптацию.</p>
                     </article>
                     <article class="faq-item">
-                        <strong>Монтаж входит в проект?</strong>
-                        <p>Да. Можно заказать как полный цикл с монтажом, так и отдельные сервисные работы по сборке и запуску.</p>
-                    </article>
-                    <article class="faq-item">
-                        <strong>В каких регионах работаете?</strong>
-                        <p>Основной фокус на Москву и Московскую область, но поставка и монтаж доступны по всей России.</p>
-                    </article>
-                    <article class="faq-item">
                         <strong>Нужно ли сразу знать точную нагрузку?</strong>
-                        <p>Нет. Для первичного подбора достаточно ориентира по товару, задачам и площади, дальше поможем уточнить параметры.</p>
+                        <p>Нет. Для первичного подбора достаточно ориентира по товару, задачам, площади и примерной нагрузке, дальше поможем уточнить параметры.</p>
                     </article>
                 </div>
             </div>
@@ -1235,14 +1066,14 @@
                     <p>
                         Чем точнее исходные данные, тем быстрее можно вернуться с предметным предложением.
                     </p>
-                    <form action="#" method="post">
+                    <form action="mailto:info@skladmsk.com" method="post" enctype="text/plain" data-mailto-form data-form-name="Финальная форма">
                         <div class="form-grid">
                             <div class="form-field">
-                                <label for="final-name">Имя</label>
+                                <label for="final-name">Имя<span class="required-mark">*</span></label>
                                 <input id="final-name" name="final-name" type="text" placeholder="Как к вам обращаться" required>
                             </div>
                             <div class="form-field">
-                                <label for="final-phone">Телефон</label>
+                                <label for="final-phone">Телефон<span class="required-mark">*</span></label>
                                 <input id="final-phone" name="final-phone" type="tel" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
                             </div>
                             <div class="form-field">
@@ -1266,10 +1097,11 @@
                                 <textarea id="final-message" name="final-message" placeholder="Укажите высоту помещения, тип задачи, желаемые сроки запуска, ограничения по монтажу и другую важную информацию"></textarea>
                             </div>
                         </div>
-                        <div class="contact-actions" style="margin-top: 18px;">
+                        <div class="contact-actions form-actions">
                             <button class="button" type="submit">Получить расчет и подбор</button>
                             <a class="button-secondary" href="tel:+74951507743">Позвонить и обсудить задачу</a>
                         </div>
+                        <div class="form-status">Если удобнее, заявка откроется как готовый черновик письма на info@skladmsk.com.</div>
                     </form>
                 </div>
             </div>
@@ -1290,6 +1122,7 @@
     <script>
         (function () {
             var phoneInputs = document.querySelectorAll('input[type="tel"]');
+            var mailtoForms = document.querySelectorAll('[data-mailto-form]');
 
             function formatPhone(value) {
                 var digits = value.replace(/\D/g, '');
@@ -1341,6 +1174,33 @@
                     if (event.target.value === '+7') {
                         event.target.value = '';
                     }
+                });
+            });
+
+            mailtoForms.forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    if (!form.reportValidity()) {
+                        return;
+                    }
+
+                    var formData = new FormData(form);
+                    var lines = [];
+
+                    formData.forEach(function (value, key) {
+                        if (!value) {
+                            return;
+                        }
+
+                        lines.push(key + ': ' + value);
+                    });
+
+                    var subject = (form.getAttribute('data-form-name') || 'Заявка') + ' - б/у мезонины';
+                    var body = lines.join('\n');
+                    var mailtoLink = 'mailto:info@skladmsk.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+                    window.location.href = mailtoLink;
                 });
             });
         }());
