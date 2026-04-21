@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Б/у мезонины под ключ - расчет, проверка, доставка и монтаж</title>
+    <meta name="description" content="Б/у мезонины под ключ для склада, комплектации, офиса и производства. Подбор по задаче, проверка состояния, доставка, монтаж и адаптация под объект. Работаем по Москве, МО и всей России.">
+    <style>
+        :root {
+            --bg: #f5efe5;
+            --surface: rgba(255, 250, 242, 0.94);
+            --surface-strong: #fff7ee;
+            --text: #1f1a16;
+            --muted: #6a5b4f;
+            --line: rgba(61, 41, 24, 0.14);
+            --primary: #b5522d;
+            --primary-dark: #7f3418;
+            --accent: #244b43;
+            --accent-soft: #dce9e1;
+            --shadow: 0 24px 60px rgba(48, 25, 11, 0.12);
+            --radius-xl: 32px;
+            --radius-lg: 22px;
+            --radius-md: 16px;
+            --max-width: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(181, 82, 45, 0.18), transparent 32%),
+                radial-gradient(circle at right 20%, rgba(36, 75, 67, 0.14), transparent 26%),
+                linear-gradient(180deg, #f8f1e8 0%, #f2ebdf 48%, #efe8dd 100%);
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        .shell {
+            width: min(var(--max-width), calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(14px);
+            background: rgba(245, 239, 229, 0.86);
+            border-bottom: 1px solid rgba(61, 41, 24, 0.08);
+        }
+
+        .topbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            box-shadow: 0 14px 24px rgba(181, 82, 45, 0.28);
+        }
+
+        .brand-note,
+        .subtle,
+        .muted {
+            color: var(--muted);
+        }
+
+        .topbar-links,
+        .hero-actions,
+        .contact-actions,
+        .scenario-actions,
+        .inline-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .chip,
+        .button,
+        .button-secondary,
+        .scenario-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 0 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+        }
+
+        .chip {
+            min-height: 42px;
+            color: var(--muted);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.55);
+        }
+
+        .button {
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), #ce6a41);
+            box-shadow: 0 18px 30px rgba(181, 82, 45, 0.26);
+        }
+
+        .button-secondary,
+        .scenario-link {
+            color: var(--text);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        .chip:hover,
+        .button:hover,
+        .button-secondary:hover,
+        .card:hover,
+        .gallery-card:hover,
+        .scenario-card:hover,
+        .case-card:hover,
+        .faq-item:hover,
+        .step-card:hover,
+        .stats-card:hover,
+        .form-panel:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            padding: 42px 0 28px;
+        }
+
+        .hero-layout,
+        .contact-wrap,
+        .cta-band,
+        .final-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 22px;
+        }
+
+        .hero-card,
+        .form-panel,
+        .card,
+        .scenario-card,
+        .case-card,
+        .gallery-card,
+        .faq-item,
+        .step-card,
+        .stats-card,
+        .contact-panel {
+            border: 1px solid rgba(61, 41, 24, 0.08);
+            border-radius: var(--radius-xl);
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card {
+            padding: 40px;
+        }
+
+        .form-panel,
+        .card,
+        .scenario-card,
+        .case-card,
+        .faq-item,
+        .step-card,
+        .stats-card,
+        .contact-panel {
+            padding: 24px;
+        }
+
+        .gallery-card {
+            overflow: hidden;
+        }
+
+        .gallery-card-content {
+            padding: 18px 20px 20px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 12ch;
+            font-size: clamp(2.5rem, 5vw, 4.8rem);
+            line-height: 0.97;
+            letter-spacing: -0.05em;
+        }
+
+        h2 {
+            font-size: clamp(1.9rem, 3.8vw, 3rem);
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .hero-copy {
+            max-width: 58ch;
+            margin-top: 22px;
+            font-size: 1.08rem;
+            color: var(--muted);
+        }
+
+        .hero-list,
+        .proof-grid,
+        .scenario-grid,
+        .service-grid,
+        .case-grid,
+        .gallery-grid,
+        .faq-grid,
+        .workflow,
+        .stats-strip,
+        .form-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .hero-list,
+        .stats-strip,
+        .form-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .proof-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .scenario-grid,
+        .service-grid,
+        .case-grid,
+        .faq-grid,
+        .gallery-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .workflow {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .hero-list .card,
+        .proof-grid .card,
+        .service-grid .card,
+        .stats-strip .stats-card {
+            border-radius: var(--radius-lg);
+        }
+
+        .card strong,
+        .scenario-card strong,
+        .faq-item strong,
+        .stats-card strong,
+        .contact-panel strong,
+        .form-panel strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .proof-grid .card::before,
+        .scenario-card::before,
+        .service-grid .card::before,
+        .faq-item::before,
+        .contact-panel::before {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 3px;
+            margin-bottom: 14px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary), rgba(181, 82, 45, 0.18));
+        }
+
+        section {
+            padding: 26px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .section-intro {
+            max-width: 58ch;
+            color: var(--muted);
+        }
+
+        .hero-meta,
+        .contact-list,
+        .check-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .hero-meta {
+            margin-top: 24px;
+        }
+
+        .metric-note,
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .metric-note {
+            color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        .badge {
+            color: #f7efe5;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .form-panel {
+            background:
+                linear-gradient(160deg, rgba(36, 75, 67, 0.97), rgba(20, 42, 37, 0.97)),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+            color: #f7efe5;
+        }
+
+        .form-panel p,
+        .form-panel label,
+        .form-panel .muted,
+        .form-panel .contact-link {
+            color: rgba(247, 239, 229, 0.82);
+        }
+
+        .contact-link {
+            font-weight: 700;
+        }
+
+        .quick-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .quick-metrics div {
+            padding: 16px;
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .quick-metrics strong {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .form-grid {
+            margin-top: 18px;
+        }
+
+        .form-field,
+        .form-field-full {
+            display: grid;
+            gap: 8px;
+        }
+
+        .form-field-full {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label,
+        .form-field-full label {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea,
+        .form-field-full textarea,
+        .form-field-full input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font: inherit;
+            outline: none;
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder,
+        .form-field-full textarea::placeholder,
+        .form-field-full input::placeholder {
+            color: rgba(247, 239, 229, 0.48);
+        }
+
+        .form-field select option {
+            color: var(--text);
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus,
+        .form-field-full textarea:focus,
+        .form-field-full input:focus {
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+        }
+
+        .form-field textarea,
+        .form-field-full textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-note {
+            margin-top: 14px;
+            font-size: 0.9rem;
+            color: rgba(247, 239, 229, 0.66);
+        }
+
+        .form-status {
+            margin-top: 12px;
+            font-size: 0.92rem;
+            color: rgba(247, 239, 229, 0.82);
+        }
+
+        .scenario-card,
+        .case-card {
+            display: grid;
+            gap: 14px;
+        }
+
+        .scenario-card p,
+        .case-card p,
+        .faq-item p,
+        .card p,
+        .gallery-card p,
+        .step-card p,
+        .contact-panel p,
+        .stats-card p {
+            color: var(--muted);
+        }
+
+        .scenario-actions {
+            margin-top: auto;
+        }
+
+        .scenario-link {
+            min-height: 42px;
+            padding: 0 14px;
+            font-size: 0.92rem;
+        }
+
+        .cta-band {
+            padding: 28px;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(140deg, #1d433b, #315f55 74%, #51796f 100%);
+            color: #f8f1e8;
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+
+        .cta-band p {
+            color: rgba(248, 241, 232, 0.82);
+        }
+
+        .case-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .case-meta,
+        .contact-lines {
+            display: grid;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .step-card span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 12px;
+            border-radius: 50%;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            font-weight: 800;
+        }
+
+        .stats-card strong {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .final-grid {
+            align-items: start;
+        }
+
+        footer {
+            padding: 16px 0 44px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 1080px) {
+            .hero-layout,
+            .contact-wrap,
+            .cta-band,
+            .final-grid,
+            .section-heading {
+                grid-template-columns: 1fr;
+                align-items: start;
+            }
+
+            .proof-grid,
+            .scenario-grid,
+            .service-grid,
+            .case-grid,
+            .gallery-grid,
+            .faq-grid,
+            .workflow {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .shell {
+                width: min(var(--max-width), calc(100% - 20px));
+            }
+
+            .topbar-inner,
+            .topbar-links,
+            .section-heading,
+            .hero-actions,
+            .contact-actions,
+            .inline-actions {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .hero-card,
+            .form-panel,
+            .card,
+            .scenario-card,
+            .case-card,
+            .faq-item,
+            .step-card,
+            .stats-card,
+            .contact-panel,
+            .cta-band {
+                padding: 20px;
+            }
+
+            .hero-list,
+            .proof-grid,
+            .scenario-grid,
+            .service-grid,
+            .case-grid,
+            .gallery-grid,
+            .faq-grid,
+            .workflow,
+            .stats-strip,
+            .form-grid,
+            .quick-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <div class="brand">
+                <div class="brand-mark">MZ</div>
+                <div>
+                    <div>Б/У Мезонины</div>
+                    <div class="brand-note">Подбор, проверка, доставка и монтаж под ключ</div>
+                </div>
+            </div>
+            <nav class="topbar-links">
+                <a class="chip" href="#solutions">Решения</a>
+                <a class="chip" href="#inspection">Проверка</a>
+                <a class="chip" href="#cases">Кейсы</a>
+                <a class="button" href="#lead-form">Получить расчет</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="shell hero-layout">
+                <div class="hero-card">
+                    <div class="eyebrow">Для склада, комплектации, офиса и производства</div>
+                    <h1>Б/у мезонины</h1>
+                    <p class="hero-copy">
+                        Подбираем б/у мезонины под задачу, площадь и нагрузку.
+                        При необходимости берем на себя проверку, доставку, монтаж и адаптацию.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button" href="#lead-form">Получить расчет за 1 день</a>
+                        <a class="button-secondary" href="tel:+74951507743">Позвонить: +7 (495) 150-77-43</a>
+                    </div>
+                    <div class="hero-meta">
+                        <div class="metric-note">Москва, МО и вся Россия</div>
+                        <div class="metric-note">Первичный подбор от 1 рабочего дня</div>
+                    </div>
+                    <div class="hero-list">
+                        <div class="card">
+                            <strong>До 60% экономии</strong>
+                            <p>По сравнению с новым мезонином при сохранении нужной функциональности решения.</p>
+                        </div>
+                        <div class="card">
+                            <strong>Быстрый запуск</strong>
+                            <p>Без ожидания полного цикла производства новой конструкции.</p>
+                        </div>
+                        <div class="card">
+                            <strong>Техническая ревизия</strong>
+                            <p>Проверяем каркас, узлы, крепеж и допустимые нагрузки перед поставкой.</p>
+                        </div>
+                        <div class="card">
+                            <strong>Один подрядчик</strong>
+                            <p>Подбор, доставка, монтаж и дооснащение идут в одном проекте.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="form-panel" id="lead-form">
+                    <div class="badge">Расчетный запрос с главной</div>
+                    <h2 style="margin-top: 14px;">Получите расчет и подбор б/у мезонина</h2>
+                    <p style="margin-top: 14px;">
+                        Для первого расчета достаточно телефона, задачи и короткого описания объекта.
+                        После этого быстро вернемся с понятным следующим шагом.
+                    </p>
+
+                    <div class="quick-metrics">
+                        <div>
+                            <strong>1 день</strong>
+                            <p>на предварительный расчет</p>
+                        </div>
+                        <div>
+                            <strong>2 звонка</strong>
+                            <p>обычно достаточно до КП</p>
+                        </div>
+                    </div>
+
+                    <form action="mailto:info@skladmsk.com" method="post" enctype="text/plain" data-mailto-form data-form-name="Запрос с hero">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="hero-name">Имя</label>
+                                <input id="hero-name" name="name" type="text" placeholder="Как к вам обращаться" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="hero-phone">Телефон</label>
+                                <input id="hero-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="hero-task">Задача</label>
+                                <select id="hero-task" name="task">
+                                    <option value="">Выберите задачу</option>
+                                    <option value="storage">Для склада и хранения</option>
+                                    <option value="picking">Для комплектации</option>
+                                    <option value="office">Под офис или архив</option>
+                                    <option value="production">Для производства</option>
+                                    <option value="service">Нужен монтаж или доставка</option>
+                                </select>
+                            </div>
+                            <div class="form-field-full">
+                                <label for="hero-message">Параметры объекта</label>
+                                <textarea id="hero-message" name="message" placeholder="Город, высота помещения, задача, ориентир по площади или нагрузке, сроки запуска"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-actions" style="margin-top: 18px;">
+                            <button class="button" type="submit">Получить подбор и расчет</button>
+                            <a class="button-secondary" href="mailto:info@skladmsk.com">Отправить параметры на e-mail</a>
+                        </div>
+                        <div class="form-status">После отправки откроется e-mail с готовым черновиком заявки.</div>
+                    </form>
+
+                    <div class="form-note">
+                        Телефон МСК: <a class="contact-link" href="tel:+74951507743">+7 (495) 150-77-43</a>
+                        | Мобильный: <a class="contact-link" href="tel:+79315213971">+7 (931) 521-39-71</a>
+                        | E-mail: <a class="contact-link" href="mailto:info@skladmsk.com">info@skladmsk.com</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section>
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Почему это работает</div>
+                        <h2>Почему компании выбирают б/у мезонины вместо нового изготовления</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Сразу ответим на три главных вопроса: подходит ли решение под объект,
+                            безопасно ли его запускать и кто отвечает за монтаж и адаптацию.
+                        </p>
+                    </div>
+                </div>
+                <div class="proof-grid">
+                    <article class="card">
+                        <strong>Экономия капитальных затрат</strong>
+                        <p>Б/у решение часто дает тот же полезный эффект по площади заметно дешевле нового проекта.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Быстрее выход в эксплуатацию</strong>
+                        <p>Не нужно ждать производство с нуля, если подходящая база уже есть и проходит ревизию.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Проверка перед поставкой</strong>
+                        <p>Ревизия каркаса, узлов и нагрузки снижает главный страх покупки б/у конструкции.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Проект под объект</strong>
+                        <p>Мы продаем не металл отдельно, а готовое решение с доставкой, монтажом и дооснащением.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Под какие задачи</div>
+                        <h2>Выберите свою задачу и получите более точный расчет</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Выберите направление под свою задачу и быстрее получите более точный расчет.
+                            Если решение уже понятно, можно сразу отправить параметры объекта через форму.
+                        </p>
+                    </div>
+                </div>
+                <div class="scenario-grid">
+                    <article class="scenario-card">
+                        <strong>Б/у мезонины для склада</strong>
+                        <p>Когда нужно быстро увеличить полезную площадь хранения без переезда и долгой перестройки склада.</p>
+                        <div class="scenario-actions">
+                            <a class="scenario-link" href="#lead-form">Рассчитать площадь хранения</a>
+                            <a class="scenario-link" href="#cases">Смотреть похожие кейсы</a>
+                        </div>
+                    </article>
+                    <article class="scenario-card">
+                        <strong>Б/у мезонины для комплектации</strong>
+                        <p>Под упаковку, подбор заказов и разделение потоков, когда нужен отдельный операционный уровень.</p>
+                        <div class="scenario-actions">
+                            <a class="scenario-link" href="#lead-form">Рассчитать зону комплектации</a>
+                            <a class="scenario-link" href="#cases">Смотреть похожие кейсы</a>
+                        </div>
+                    </article>
+                    <article class="scenario-card">
+                        <strong>Б/у мезонины под офис и архив</strong>
+                        <p>Когда нужно поднять кабинеты, архив, посты контроля или другие административные зоны внутри объекта.</p>
+                        <div class="scenario-actions">
+                            <a class="scenario-link" href="#lead-form">Подобрать офисный вариант</a>
+                            <a class="scenario-link" href="#contact">Уточнить по объекту</a>
+                        </div>
+                    </article>
+                    <article class="scenario-card">
+                        <strong>Б/у мезонины под задачу объекта</strong>
+                        <p>Когда нужно подобрать решение по высоте, площади, нагрузке и формату работы площадки без лишних догадок.</p>
+                        <div class="scenario-actions">
+                            <a class="scenario-link" href="#lead-form">Отправить параметры объекта</a>
+                            <a class="scenario-link" href="#inspection">Как идет проверка</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="inspection">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Как проверяем</div>
+                        <h2>Как проверяем б/у мезонин перед поставкой и что берем на себя дальше</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Вы покупаете не металл вслепую, а решение под задачу объекта.
+                            Сначала проверяем состояние конструкции, затем берем на себя логистику, монтаж и запуск.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-grid">
+                    <article class="card">
+                        <strong>Проверка геометрии каркаса</strong>
+                        <p>Проверяем состояние несущих элементов и сразу отсеиваем решения, которые не подходят под повторный запуск.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Ревизия узлов и крепежа</strong>
+                        <p>Смотрим соединения, выявляем слабые места и заранее понимаем, что нужно заменить до монтажа.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Оценка допустимой нагрузки</strong>
+                        <p>Сопоставляем конструкцию с фактической задачей и нагрузкой, а не только с паспортными цифрами.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Проверка под задачу объекта</strong>
+                        <p>Учитываем высоту, планировку, проходы, тип груза и формат работы площадки до подтверждения решения.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Доставка на объект</strong>
+                        <p>Берем на себя логистику и сроки, чтобы проект не распадался между разными подрядчиками.</p>
+                    </article>
+                    <article class="card">
+                        <strong>Монтаж и запуск</strong>
+                        <p>Собираем, дооснащаем и вводим конструкцию в работу с учетом требований безопасности и задач объекта.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Кейсы</div>
+                        <h2>Кейсы показывают результат проекта в цифрах, сроках и полезной площади</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Эти примеры показывают результат проекта: дополнительную площадь,
+                            сроки запуска и выгоду по сравнению с новым решением.
+                        </p>
+                    </div>
+                </div>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <div class="case-tag">Хранение</div>
+                        <h3>Склад получил дополнительную площадь без переезда и остановки текущей работы</h3>
+                        <p>Подобрали конструкцию под высоту помещения, провели ревизию и смонтировали решение в короткий срок.</p>
+                        <div class="case-meta">
+                            <span>+120 м2 полезной площади</span>
+                            <span>Монтаж за 5 дней</span>
+                            <span>Бюджет ниже нового проекта</span>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-tag">Комплектация</div>
+                        <h3>Для e-commerce-склада быстро запустили второй уровень под упаковку и подбор заказов</h3>
+                        <p>Собрали решение на базе б/у мезонина с настилом и ограждениями, чтобы отделить операционную зону от хранения.</p>
+                        <div class="case-meta">
+                            <span>Быстрый ввод в эксплуатацию</span>
+                            <span>Отдельная зона отбора</span>
+                            <span>Монтаж под ключ</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="inline-actions" style="margin-top: 22px; justify-content: center;">
+                    <a class="button" href="#lead-form">Обсудить похожую задачу</a>
+                    <a class="button-secondary" href="#contact">Запросить похожий кейс</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">Фото объектов</div>
+                        <h2>Фото помогают увидеть реальные масштабы объектов и понять, как решение выглядит на практике</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Фото показывают, что речь идет о реальных объектах,
+                            а не только о текстовом описании услуги.
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <article class="gallery-card">
+                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-1.jpeg" alt="Б/у мезонин на складе">
+                        <div class="gallery-card-content">
+                            <strong>Б/у мезонин для хранения</strong>
+                            <p>Решение для быстрого увеличения площади хранения без запуска нового производства с нуля.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/gallery/mezoniny-b-u_gal-2.jpeg" alt="Мезонин для комплектации и упаковки">
+                        <div class="gallery-card-content">
+                            <strong>Зона комплектации</strong>
+                            <p>Отдельный уровень под упаковку, подбор заказов и разведение операционных потоков.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card">
+                        <img src="https://xn--80aiqcci4af.xn--p1ai/image/catalog/about/about_sklad_1.jpg" alt="Складской объект компании">
+                        <div class="gallery-card-content">
+                            <strong>Склад и логистика</strong>
+                            <p>Логистическая база для комплектации, отгрузки и подготовки проектов к поставке.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="inline-actions" style="margin-top: 22px; justify-content: center;">
+                    <a class="button" href="#lead-form">Подобрать похожее решение</a>
+                    <a class="button-secondary" href="#contact">Запросить фото по похожей задаче</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="shell">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">FAQ</div>
+                        <h2>Частые вопросы, которые мешают оставить заявку на б/у мезонин</h2>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            Ответы на частые вопросы помогают быстрее понять стоимость, условия монтажа,
+                            безопасность конструкции и регионы поставки.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <strong>Как понять, что конструкция безопасна?</strong>
+                        <p>Через ревизию каркаса, узлов, крепежа и сопоставление допустимой нагрузки с вашей задачей.</p>
+                    </article>
+                    <article class="faq-item">
+                        <strong>Можно ли адаптировать решение под мой объект?</strong>
+                        <p>Да, если исходная база подходит по геометрии и после проверки допускает безопасную адаптацию.</p>
+                    </article>
+                    <article class="faq-item">
+                        <strong>Нужно ли сразу знать точную нагрузку?</strong>
+                        <p>Нет. Для первичного подбора достаточно ориентира по товару, задачам и площади, дальше поможем уточнить параметры.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="shell final-grid">
+                <div class="contact-panel">
+                    <div class="eyebrow">Финальная точка входа</div>
+                    <h2>Отправьте параметры объекта и получите следующий понятный шаг по проекту</h2>
+                    <p style="margin-top: 16px; max-width: 54ch;">
+                        На этом этапе уже не нужен долгий вводный разговор.
+                        Достаточно отправить ключевые параметры, чтобы перейти к расчету и подбору подходящего решения.
+                    </p>
+                    <div class="contact-actions">
+                        <a class="button" href="tel:+74951507743">Позвонить: +7 (495) 150-77-43</a>
+                        <a class="button-secondary" href="mailto:info@skladmsk.com">Написать: info@skladmsk.com</a>
+                    </div>
+                    <div class="contact-lines" style="margin-top: 18px;">
+                        <div>Телефон МСК: <a href="tel:+74951507743">+7 (495) 150-77-43</a></div>
+                        <div>Мобильный: <a href="tel:+79315213971">+7 (931) 521-39-71</a></div>
+                        <div>E-mail: <a href="mailto:info@skladmsk.com">info@skladmsk.com</a></div>
+                        <div>География: Москва, Московская область и вся Россия</div>
+                        <div>Режим работы: Пн-Пт 09:30-18:00</div>
+                    </div>
+                </div>
+
+                <div class="form-panel">
+                    <strong>Финальная расчетная форма</strong>
+                    <p>
+                        Чем точнее исходные данные, тем быстрее можно вернуться с предметным предложением.
+                    </p>
+                    <form action="mailto:info@skladmsk.com" method="post" enctype="text/plain" data-mailto-form data-form-name="Финальная форма">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="final-name">Имя</label>
+                                <input id="final-name" name="final-name" type="text" placeholder="Как к вам обращаться" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="final-phone">Телефон</label>
+                                <input id="final-phone" name="final-phone" type="tel" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="final-email">E-mail</label>
+                                <input id="final-email" name="final-email" type="email" placeholder="info@company.ru">
+                            </div>
+                            <div class="form-field">
+                                <label for="final-city">Город</label>
+                                <input id="final-city" name="final-city" type="text" placeholder="Москва, МО или другой регион">
+                            </div>
+                            <div class="form-field">
+                                <label for="final-area">Площадь</label>
+                                <input id="final-area" name="final-area" type="text" placeholder="Например, 100-150 м2">
+                            </div>
+                            <div class="form-field">
+                                <label for="final-load">Нагрузка</label>
+                                <input id="final-load" name="final-load" type="text" placeholder="Например, 300-500 кг/м2">
+                            </div>
+                            <div class="form-field-full">
+                                <label for="final-message">Описание задачи</label>
+                                <textarea id="final-message" name="final-message" placeholder="Укажите высоту помещения, тип задачи, желаемые сроки запуска, ограничения по монтажу и другую важную информацию"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-actions" style="margin-top: 18px;">
+                            <button class="button" type="submit">Получить расчет и подбор</button>
+                            <a class="button-secondary" href="tel:+74951507743">Позвонить и обсудить задачу</a>
+                        </div>
+                        <div class="form-status">Если удобнее, заявка откроется как готовый черновик письма на info@skladmsk.com.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="shell contact-wrap">
+            <div>
+                Б/у мезонины как основной продукт, понятные направления под разные задачи и расчетная заявка в hero и финале.
+            </div>
+            <div style="text-align: right;">
+                <a href="tel:+74951507743">+7 (495) 150-77-43</a> | <a href="mailto:info@skladmsk.com">info@skladmsk.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var phoneInputs = document.querySelectorAll('input[type="tel"]');
+            var mailtoForms = document.querySelectorAll('[data-mailto-form]');
+
+            function formatPhone(value) {
+                var digits = value.replace(/\D/g, '');
+
+                if (!digits) {
+                    return '+7';
+                }
+
+                if (digits.charAt(0) === '8') {
+                    digits = '7' + digits.slice(1);
+                }
+
+                if (digits.charAt(0) !== '7') {
+                    digits = '7' + digits;
+                }
+
+                digits = digits.slice(0, 11);
+
+                var result = '+7';
+
+                if (digits.length > 1) {
+                    result += ' (' + digits.slice(1, 4);
+                }
+                if (digits.length >= 4) {
+                    result += ') ' + digits.slice(4, 7);
+                }
+                if (digits.length >= 7) {
+                    result += '-' + digits.slice(7, 9);
+                }
+                if (digits.length >= 9) {
+                    result += '-' + digits.slice(9, 11);
+                }
+
+                return result;
+            }
+
+            phoneInputs.forEach(function (input) {
+                input.addEventListener('focus', function (event) {
+                    if (!event.target.value) {
+                        event.target.value = '+7';
+                    }
+                });
+
+                input.addEventListener('input', function (event) {
+                    event.target.value = formatPhone(event.target.value);
+                });
+
+                input.addEventListener('blur', function (event) {
+                    if (event.target.value === '+7') {
+                        event.target.value = '';
+                    }
+                });
+            });
+
+            mailtoForms.forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    if (!form.reportValidity()) {
+                        return;
+                    }
+
+                    var formData = new FormData(form);
+                    var lines = [];
+
+                    formData.forEach(function (value, key) {
+                        if (!value) {
+                            return;
+                        }
+
+                        lines.push(key + ': ' + value);
+                    });
+
+                    var subject = (form.getAttribute('data-form-name') || 'Заявка') + ' - б/у мезонины';
+                    var body = lines.join('\n');
+                    var mailtoLink = 'mailto:info@skladmsk.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+                    window.location.href = mailtoLink;
+                });
+            });
+        }());
+    </script>
+</body>
+</html>

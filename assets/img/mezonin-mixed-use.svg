@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Смешанный проект с мезонином</title>
+  <desc id="desc">Каталожный визуал смешанного объекта: офисный блок на мезонине, нижний уровень хранения, рабочая зона и лестница.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d6dfda"/>
+      <stop offset="35%" stop-color="#eef1ee"/>
+      <stop offset="100%" stop-color="#d7c7b4"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#826b5d"/>
+      <stop offset="100%" stop-color="#67534a"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#ca6a3d"/>
+      <stop offset="100%" stop-color="#7d3418"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4b6b63"/>
+      <stop offset="100%" stop-color="#223c36"/>
+    </linearGradient>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.04"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#11100f" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <path d="M0 726L1600 648V980H0Z" fill="url(#floor)"/>
+  <path d="M0 770L1600 694" stroke="#d8bea7" stroke-width="2" opacity="0.28"/>
+
+  <g opacity="0.18">
+    <rect x="118" y="86" width="120" height="286" fill="#ffffff"/>
+    <rect x="258" y="86" width="120" height="286" fill="#ffffff"/>
+    <rect x="398" y="86" width="120" height="286" fill="#ffffff"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M176 160H1430L1488 736H118Z" fill="#fbf7f2"/>
+    <path d="M242 286H1360L1388 306H214Z" fill="url(#beam)"/>
+    <path d="M206 584H1400L1428 604H178Z" fill="url(#beam)"/>
+
+    <g fill="url(#steel)">
+      <path d="M272 308H298V742H252Z"/>
+      <path d="M516 304H542V730H496Z"/>
+      <path d="M760 300H786V718H740Z"/>
+      <path d="M1004 296H1030V706H984Z"/>
+      <path d="M1248 292H1274V694H1228Z"/>
+    </g>
+
+    <g fill="#294b43">
+      <path d="M234 258H1368L1382 272H220Z"/>
+      <path d="M198 554H1404L1418 566H184Z"/>
+      <path d="M234 258L198 554H184L218 258Z"/>
+      <path d="M1368 258L1404 554H1418L1382 258Z"/>
+    </g>
+
+    <g>
+      <path d="M310 354H674L660 552H290Z" fill="#dce7e2" stroke="#294b43" stroke-width="6"/>
+      <path d="M330 384H644L634 522H320Z" fill="#f2f6f4"/>
+      <path d="M430 384V522" stroke="#b9c8c0" stroke-width="6"/>
+      <path d="M534 384V522" stroke="#b9c8c0" stroke-width="6"/>
+      <path d="M330 426H644" stroke="#b9c8c0" stroke-width="6"/>
+      <rect x="344" y="336" width="182" height="22" rx="11" fill="#294b43" opacity="0.74"/>
+      <rect x="558" y="336" width="82" height="22" rx="11" fill="#d36e40"/>
+    </g>
+
+    <g fill="#e6d7c8" stroke="#846f62" stroke-width="4">
+      <path d="M740 368H856V516H726Z"/>
+      <path d="M898 362H1014V508H884Z"/>
+      <path d="M1056 356H1172V500H1042Z"/>
+      <path d="M1214 350H1308V492H1200Z"/>
+    </g>
+
+    <g fill="#d5bba4" stroke="#775f52" stroke-width="4">
+      <path d="M292 612H430V716H280Z"/>
+      <path d="M462 606H600V706H450Z"/>
+      <path d="M936 596H1074V692H924Z"/>
+      <path d="M1106 590H1244V684H1094Z"/>
+    </g>
+
+    <g>
+      <path d="M726 600H870V710H712Z" fill="#234a42"/>
+      <path d="M748 622H826" stroke="#f6ede3" stroke-width="10" stroke-linecap="round"/>
+      <path d="M748 652H800" stroke="#dbe7df" stroke-width="8" stroke-linecap="round"/>
+      <path d="M748 678H836" stroke="#d36e40" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+    <g>
+      <path d="M1220 314H1300L1346 666H1248Z" fill="#f1ebe4" stroke="#294b43" stroke-width="8"/>
+      <g stroke="#294b43" stroke-width="6">
+        <line x1="1232" y1="620" x2="1314" y2="620"/>
+        <line x1="1226" y1="584" x2="1308" y2="584"/>
+        <line x1="1220" y1="548" x2="1302" y2="548"/>
+        <line x1="1214" y1="512" x2="1296" y2="512"/>
+        <line x1="1208" y1="476" x2="1290" y2="476"/>
+        <line x1="1202" y1="440" x2="1284" y2="440"/>
+      </g>
+    </g>
+
+    <path d="M242 744C528 686 976 680 1450 752L1470 774C970 716 516 722 220 780Z" fill="#382d29" opacity="0.24"/>
+  </g>
+
+  <g>
+    <rect x="132" y="786" width="690" height="140" rx="28" fill="#181615" opacity="0.84"/>
+    <text x="180" y="842" fill="#f4efe8" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700">Смешанный проект без нового строительства</text>
+    <text x="180" y="884" fill="#decfc1" font-family="Segoe UI, Arial, sans-serif" font-size="24">Хранение снизу, офис и рабочая зона сверху</text>
+  </g>
+
+  <g>
+    <rect x="1238" y="118" width="222" height="78" rx="18" fill="#f8f4ee" opacity="0.92"/>
+    <text x="1272" y="150" fill="#24453e" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">СМЕШАННЫЙ ОБЪЕКТ</text>
+    <text x="1272" y="178" fill="#8d7568" font-family="Segoe UI, Arial, sans-serif" font-size="16">хранение + офис + сервис</text>
+  </g>
+
+  <rect width="1600" height="980" fill="#000000" opacity="0.05" filter="url(#grain)"/>
+</svg>

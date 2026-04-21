@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Складской б/у мезонин</title>
+  <desc id="desc">Каталожный визуал складского б/у мезонина с перспективой, настилом, лестницей, паллетными зонами и светом внутри склада.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#cfd8d3"/>
+      <stop offset="38%" stop-color="#e7ece8"/>
+      <stop offset="100%" stop-color="#d9c9b8"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#80685a"/>
+      <stop offset="42%" stop-color="#a98d77"/>
+      <stop offset="100%" stop-color="#6a564b"/>
+    </linearGradient>
+    <linearGradient id="steelDark" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#49665f"/>
+      <stop offset="100%" stop-color="#1f3934"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#cc693c"/>
+      <stop offset="55%" stop-color="#a84e2a"/>
+      <stop offset="100%" stop-color="#7f361a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.2" cy="0.18" r="0.8">
+      <stop offset="0%" stop-color="#fff7d8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fff7d8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.045"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#11100f" flood-opacity="0.26"/>
+    </filter>
+    <filter id="panelShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#11100f" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="980" fill="url(#wall)"/>
+  <rect width="1600" height="980" fill="url(#sun)"/>
+  <path d="M0 682L1600 610V980H0Z" fill="url(#floor)"/>
+  <path d="M0 742L1600 666" stroke="#cdb39f" stroke-width="3" opacity="0.3"/>
+  <path d="M0 804L1600 728" stroke="#ead8c7" stroke-width="2" opacity="0.18"/>
+
+  <g opacity="0.75">
+    <rect x="94" y="70" width="1412" height="114" rx="28" fill="#f8f5ef"/>
+    <rect x="140" y="114" width="292" height="14" rx="7" fill="#8d7769" opacity="0.35"/>
+    <rect x="140" y="142" width="228" height="10" rx="5" fill="#b9a697" opacity="0.5"/>
+    <rect x="1226" y="114" width="176" height="12" rx="6" fill="#8d7769" opacity="0.32"/>
+    <rect x="1226" y="140" width="120" height="10" rx="5" fill="#b9a697" opacity="0.46"/>
+  </g>
+
+  <g opacity="0.16">
+    <rect x="164" y="212" width="122" height="286" fill="#ffffff"/>
+    <rect x="308" y="212" width="122" height="286" fill="#ffffff"/>
+    <rect x="452" y="212" width="122" height="286" fill="#ffffff"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <path d="M242 292H1320L1390 604H182Z" fill="#fbf7f2"/>
+    <path d="M262 330H1302L1346 354H232Z" fill="url(#beam)"/>
+    <path d="M226 540H1354L1382 572H198Z" fill="url(#beam)"/>
+
+    <g fill="url(#steelDark)">
+      <path d="M284 358H308V646H266Z"/>
+      <path d="M496 358H520V632H478Z"/>
+      <path d="M708 356H732V616H690Z"/>
+      <path d="M920 352H944V602H902Z"/>
+      <path d="M1132 348H1156V590H1114Z"/>
+      <path d="M1264 346H1288V582H1246Z"/>
+    </g>
+
+    <g fill="#24453e">
+      <path d="M254 322H1306L1324 338H236Z"/>
+      <path d="M218 530H1362L1376 544H204Z"/>
+      <path d="M254 322L218 530H204L238 322Z"/>
+      <path d="M1306 322L1362 530H1376L1324 322Z"/>
+    </g>
+
+    <g fill="#e6d8c9" stroke="#8b7768" stroke-width="4">
+      <path d="M332 404H448V506H320Z"/>
+      <path d="M530 398H644V496H518Z"/>
+      <path d="M726 392H842V486H714Z"/>
+      <path d="M922 386H1036V476H910Z"/>
+      <path d="M1118 380H1216V466H1106Z"/>
+    </g>
+
+    <g fill="#d4bba3" stroke="#7b6658" stroke-width="4">
+      <path d="M314 572H436V648H304Z"/>
+      <path d="M510 566H632V640H500Z"/>
+      <path d="M706 560H828V632H696Z"/>
+      <path d="M902 554H1024V624H892Z"/>
+    </g>
+
+    <g>
+      <path d="M1186 378H1272L1312 586H1220Z" fill="#f2ece4" stroke="#2b4942" stroke-width="8"/>
+      <g stroke="#2b4942" stroke-width="6">
+        <line x1="1198" y1="554" x2="1266" y2="554"/>
+        <line x1="1192" y1="522" x2="1260" y2="522"/>
+        <line x1="1186" y1="490" x2="1254" y2="490"/>
+        <line x1="1180" y1="458" x2="1248" y2="458"/>
+        <line x1="1174" y1="426" x2="1242" y2="426"/>
+      </g>
+    </g>
+
+    <path d="M252 658C498 616 882 610 1346 666L1370 688C882 630 492 642 230 686Z" fill="#4e4037" opacity="0.24"/>
+  </g>
+
+  <g filter="url(#panelShadow)">
+    <rect x="118" y="734" width="436" height="154" rx="28" fill="#181615" opacity="0.82"/>
+    <text x="162" y="792" fill="#f5efe7" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700">Каталожный объект</text>
+    <text x="162" y="834" fill="#dbcdbf" font-family="Segoe UI, Arial, sans-serif" font-size="24">2 уровня, ограждения, настил и паллетные зоны</text>
+    <text x="162" y="868" fill="#b89e88" font-family="Segoe UI, Arial, sans-serif" font-size="20">Под склад, комплектацию и рабочие маршруты</text>
+  </g>
+
+  <g>
+    <rect x="1240" y="748" width="218" height="94" rx="22" fill="#f8f4ee" opacity="0.92"/>
+    <text x="1274" y="790" fill="#24453e" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Б/У МЕЗОНИН</text>
+    <text x="1274" y="822" fill="#8d7568" font-family="Segoe UI, Arial, sans-serif" font-size="18">в наличии под подбор</text>
+  </g>
+
+  <rect width="1600" height="980" fill="#000000" opacity="0.05" filter="url(#grain)"/>
+</svg>
